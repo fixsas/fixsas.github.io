@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="https://random.52ecy.cn/randbg.php">
+  <title>java基础语法学习笔记 | Asa</title>
+  <meta name="author" content="Asa" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="java学习, 学习分享, 学习笔记" />
+  
+  <meta name="description" content="java的基础语法需要掌握：java注释（Annotation）、标识符的定义规则、常量、整形常量（byte、short、int、long）、浮点数常量（float、double）、字符常量（char）、字符串常量（&quot;&quot;）、布尔常量（boolean）、null常量。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础语法学习笔记">
+<meta property="og:url" content="http://example.com/2021/02/21/java/index.html">
+<meta property="og:site_name" content="Asa">
+<meta property="og:description" content="java的基础语法需要掌握：java注释（Annotation）、标识符的定义规则、常量、整形常量（byte、short、int、long）、浮点数常量（float、double）、字符常量（char）、字符串常量（&quot;&quot;）、布尔常量（boolean）、null常量。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://random.52ecy.cn/randbg.php">
+<meta property="article:published_time" content="2021-02-21T13:07:56.838Z">
+<meta property="article:modified_time" content="2021-02-21T13:16:03.702Z">
+<meta property="article:author" content="Asa">
+<meta property="article:tag" content="java学习">
+<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="学习分享">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://random.52ecy.cn/randbg.php">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="highlight-css" href="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/css/highlight.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+  
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <div class="nav-toggle"><a class="kratos-nav-toggle js-kratos-nav-toggle"><i></i></a></div>
+            <header id="kratos-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <div class="color-logo"><a href="/">Asa</a></div>
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>Asa</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                <h1 class="kratos-entry-title text-center">java基础语法学习笔记</h1>
+                
+                <ul class="kratos-post-meta text-center">
+                    <li><i class="fa fa-calendar"></i> 2021-02-21</li>
+                    <li><i class="fa fa-user"></i> 作者 Asa</li>
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~2.75K
+                        
+                        字
+                    </li>
+                    
+                </ul>
+            </header>
+            <div class="kratos-post-content">
+                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                    本文最后编辑于 <time datetime="1613913363702"></time> 前，其中的内容可能需要更新。
+                </div>
+                
+                    <div class="kratos-post-inner-toc">
+                        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%A0%87%E8%AF%86%E7%AC%A6%E9%9C%80%E6%B3%A8%E6%84%8F"><span class="toc-number">1.</span> <span class="toc-text">定义标识符需注意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E5%BD%A2%E5%B8%B8%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">整形常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E5%B8%B8%E9%87%8F"><span class="toc-number">4.</span> <span class="toc-text">浮点数常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%B8%B8%E9%87%8F"><span class="toc-number">5.</span> <span class="toc-text">字符常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F"><span class="toc-number">6.</span> <span class="toc-text">字符串常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E5%B8%B8%E9%87%8F"><span class="toc-number">7.</span> <span class="toc-text">布尔常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null%E5%B8%B8%E9%87%8F"><span class="toc-number">8.</span> <span class="toc-text">null常量</span></a></li></ol>
+                    </div>
+                
+                <hr />
+                <p font-family="仿宋">java的基础语法需要掌握：java注释（Annotation）、标识符的定义规则、常量、整形常量（byte、short、int、long）、浮点数常量（float、double）、字符常量（char）、字符串常量（""）、布尔常量（boolean）、null常量。</p>
+
+<span id="more"></span>
+
+<p>基础语法没什么可以讲的，只不过需要注意一些要点就行。</p>
+<blockquote>
+<p>注释：单行注释:通常用于对程序中的某一行代码进行解释，用符号“//” 表示，“//”后面为被注释的内容。</p>
+<p>多行注释:顾名思义就是在注释中的内容可以为多行，它以符号“/<em>”开头，以符号“</em>/” 结尾。</p>
+<p>文档注释:以‘“/*<em>”开头，并在注释内容末尾以‘“</em>/‘”结束。</p>
+</blockquote>
+<h3 id="定义标识符需注意"><a href="#定义标识符需注意" class="headerlink" title="定义标识符需注意"></a>定义标识符需注意</h3><blockquote>
+<p>1、包名所有字母一律小写。例如: cn.itcast.test.</p>
+<p>2、类名和接口名每个单词的首字母都要大写。如: ArrayLlist、 Iterator。</p>
+<p>3、常量名所有字母都大写，单词之间用下划线连接。例如:DAY_ OF_ _MONTH。</p>
+<p>4、变量名和方法名的第一个单词首字母小写，从第二个单词开始每个单词首字母大写。例如: lineNumber、 getLineNumber.</p>
+<p>5、在程序中，应该尽量使用有意义的英文单词来定义标识符，使得程序便于阅读。例如使用userName表示用户名，password表示密码。</p>
+</blockquote>
+<p>还有在创建package和class的时候不要使用关键字去进行创建，关键字就是java中的函数，比如int  long   double等都是关键字。</p>
+<p>下面是常见的关键字</p>
+<div class="panel panel-danger">
+    <div class="panel-title">常见的关键字</div>
+    <div class="panel-body">
+        <table>
+<thead>
+<tr>
+<th align="center">abstract</th>
+<th align="center">continus</th>
+<th align="center">for</th>
+<th align="center">new</th>
+<th align="center">switch</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">assert</td>
+<td align="center"><p align="center">default</p></td>
+<td align="center">goto</td>
+<td align="center">package</td>
+<td align="center">synchronized</td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center"><p align="center">do</p></td>
+<td align="center">if</td>
+<td align="center">private</td>
+<td align="center">this</td>
+</tr>
+<tr>
+<td align="center">break</td>
+<td align="center"><p align="center">double</p></td>
+<td align="center">implements</td>
+<td align="center">protected</td>
+<td align="center">throw</td>
+</tr>
+<tr>
+<td align="center">byte</td>
+<td align="center"><p align="center">else</p></td>
+<td align="center">import</td>
+<td align="center">public</td>
+<td align="center">throws</td>
+</tr>
+<tr>
+<td align="center">case</td>
+<td align="center"><p align="center">enum</p></td>
+<td align="center">insranceof</td>
+<td align="center">return</td>
+<td align="center">traneient</td>
+</tr>
+<tr>
+<td align="center">catch</td>
+<td align="center"><p align="center">extends</p></td>
+<td align="center">int</td>
+<td align="center">short</td>
+<td align="center">try</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center"><p align="center">final</p></td>
+<td align="center">interface</td>
+<td align="center">static</td>
+<td align="center">void</td>
+</tr>
+<tr>
+<td align="center">class</td>
+<td align="center"><p align="center">finally</p></td>
+<td align="center">long</td>
+<td align="center">strictfp</td>
+<td align="center">volatile</td>
+</tr>
+<tr>
+<td align="center">const</td>
+<td align="center"><p align="center">float</p></td>
+<td align="center">native</td>
+<td align="center">super</td>
+<td align="center">while</td>
+</tr>
+</tbody></table>
+
+    </div>
+    </div>
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>常量就是在程序中固定不变的值，是不能改变的数据。在Java中，常量包括整型常量、浮点数常量、布尔常量、字符常量等。</p>
+<h3 id="整形常量"><a href="#整形常量" class="headerlink" title="整形常量"></a>整形常量</h3><p>整形常量是整数类型的数据，它所表现的形式有以下几种类型。</p>
+<blockquote>
+<p>二进制:由数字0和1组成的数字序列，如: 00110101。</p>
+<p>八进制:以开头并且其后由0 ~7范围(包括和7)内的整数组成的数字序列，如: 0342。</p>
+<p>十进制:由数字0~9范围(包括o和9)内的整数组成的数字序列。如: 198。整数以十进制表示时，第一位不能是0，0本身除外。</p>
+<p>十六进制:以0x或者ox开头并且其后由0—9、A—F(包括和9、A和F)组成的数字序列，如0x25AF。</p>
+</blockquote>
+<h3 id="浮点数常量"><a href="#浮点数常量" class="headerlink" title="浮点数常量"></a>浮点数常量</h3><blockquote>
+<p>浮点数常量就是在数学中用到的小数，分为float单精度浮点数和double双精度浮点数两种类型。其中，单精度浮点数后面以F或f结尾，而双精度浮点数则以D或d结尾。当然，在使用浮点数时也可以在结尾处不加任何的后缀，此时虚拟机会默认为double双精度浮点数。浮点数常量还可以通过指数形式来表示。具体示例如下:2e3f   3.6d    0f    3.84d    5. 022e+23f4</p>
+</blockquote>
+<p>其中e表示倍数，而f是因为在浮点数常量中通过float赋值的情况下，一般默认浮点数的类型为double型，所以需要f来进行确定该值为float类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Market</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">float</span> a = <span class="number">1.2</span>; <span class="comment">//类型不匹配；不能从double转换为float</span></span><br><span class="line">		System.out.println(a);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面是Eclipse中得出结果，从上面可以看出，不写f的话1.2就会被判断为double型，所以需要在1.2后面加上f才能识别出float类型。</p>
+<p>如果不加f的话也可以解决这个问题吗？可以的,可以使用强制类型转换去进行转换，但是如果数值太大的话则可能会导致数值丢失问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a = (<span class="keyword">float</span>) <span class="number">1.2</span>;<span class="comment">//强制类型转换</span></span><br></pre></td></tr></table></figure>
+
+<p>当数值类型为double类型时，值后面的字母D和d可加可不加。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> a = <span class="number">100.6</span>;</span><br><span class="line"><span class="keyword">double</span> b = <span class="number">152.6d</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符常量"><a href="#字符常量" class="headerlink" title="字符常量"></a>字符常量</h3><blockquote>
+<p font-family="仿宋">字符常量用于表示一个字符，一个字符常量要用一对英文半角格式的单引号(' ')引起来，它可以是英文字母、数字、标点符号、以及由转义序列来表示的特殊字符。具体示例如下:'a'    '1'    '&'     '\r  '    '\u0000' </p>
+
+<p font-family="仿宋">上面的示例中，'\u0000'表示一个空白字符，即在单引号之间没有任何字符。之，所以能这样表示是因为，Java采用的是Unicode字符集,Unicode字符以\u开头，空白字符在Unicode码表中对应的值为'\u0000'。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a =<span class="string">&#x27;a&#x27;</span> </span><br><span class="line"><span class="keyword">char</span> b =<span class="string">&#x27;\u0000&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串常量"><a href="#字符串常量" class="headerlink" title="字符串常量"></a>字符串常量</h3><p>注意：字符串需要英文的括号和双引号，一个字符串可以包含一个字符或多个字符，也可以是不包含任何字符，即长度为零。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(a)<span class="comment">//这个不是字符串哦</span></span><br><span class="line">System.out.println(<span class="string">&quot;a&quot;</span>)<span class="comment">//这个才是(￣▽￣)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="布尔常量"><a href="#布尔常量" class="headerlink" title="布尔常量"></a>布尔常量</h3><p>布尔常量在java中不像C++那样使用1和0去表示true或者false.它是直接以true和false的值去进行判断的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Market</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">boolean</span> a1 = <span class="keyword">false</span>;<span class="comment">//声明一个布尔类型，初始值为false</span></span><br><span class="line">        	a1 = <span class="keyword">true</span>;<span class="comment">//改变a1变量的值为ture</span></span><br><span class="line">		System.out.println(a1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后输出的结果是ture.</p>
+<h3 id="null常量"><a href="#null常量" class="headerlink" title="null常量"></a>null常量</h3><p>null常量只有一个值null，表示对象的引用为空。</p>
+
+            </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://example.com/2021/02/21/java/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://example.com/2021/02/21/java/";
+            const title         = "「java基础语法学习笔记」";
+            const excerpt       = `java的基础语法需要掌握：java注释（Annotation）、标识符的定义规则、常量、整形常量（byte、short、int、long）、浮点数常量（float、double）、字符常量（char）、字符串常量（""）、布尔常量（boolean）、null常量。`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/java%E5%AD%A6%E4%B9%A0/" rel="tag">java学习</a>, <a class="tag-none-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/" rel="tag">学习分享</a>, <a class="tag-none-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a>
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2021-02-21</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        
+    </article>
+</section>
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm sticky-area">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area-disabled">
+    
+    <!-- 这里现在还是个坑 -->
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/logo.jpg" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">技术分享</p>
+    </div>
+</aside>
+            
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%A0%87%E8%AF%86%E7%AC%A6%E9%9C%80%E6%B3%A8%E6%84%8F"><span class="toc-text">定义标识符需注意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E5%BD%A2%E5%B8%B8%E9%87%8F"><span class="toc-text">整形常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E5%B8%B8%E9%87%8F"><span class="toc-text">浮点数常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E5%B8%B8%E9%87%8F"><span class="toc-text">字符常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F"><span class="toc-text">字符串常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E5%B8%B8%E9%87%8F"><span class="toc-text">布尔常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null%E5%B8%B8%E9%87%8F"><span class="toc-text">null常量</span></a></li></ol>
+    </div>
+</aside>
+                
+                
+  <aside id="krw-categories" class="widget widget-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/java%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">java学习</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/" style="font-size: 0.6em;">学习分享</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 0.6em;">学习笔记</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2021/02/21/java/"><i class="fa  fa-book"></i> java基础语法学习笔记</a>
+            
+          
+        
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  >
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2021 Asa 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Made with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by <a href="https://candinya.com" target="_blank" rel="nofollow">Candinya</a>.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+    <div>
+        <canvas id="snow"></canvas>
+        <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/snow.min.js"></script>
+    </div>
+
+<script async src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/candy.min.js"></script>
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/kratosr.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/pjax.min.js"></script>
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/Candinya/Kratos-Rebirth@latest/source/js/kr-dark.min.js"></script>
+
+
+    </body>
+</html>
