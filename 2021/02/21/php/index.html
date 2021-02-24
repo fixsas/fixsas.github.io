@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="https://random.52ecy.cn/randbg.php">
+  <title>php之日历项目实战经验 | Asa</title>
+  <meta name="author" content="Asa" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="PHP, PHP实战, 学习分享" />
+  
+  <meta name="description" content="本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、for循环语句、if条件判断语句).">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php之日历项目实战经验">
+<meta property="og:url" content="http://example.com/2021/02/21/php/index.html">
+<meta property="og:site_name" content="Asa">
+<meta property="og:description" content="本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、for循环语句、if条件判断语句).">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://random.52ecy.cn/randbg.php">
+<meta property="article:published_time" content="2021-02-21T13:37:00.991Z">
+<meta property="article:modified_time" content="2021-02-24T07:19:04.241Z">
+<meta property="article:author" content="Asa">
+<meta property="article:tag" content="学习分享">
+<meta property="article:tag" content="PHP">
+<meta property="article:tag" content="PHP实战">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://random.52ecy.cn/randbg.php">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+  
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <div class="nav-toggle"><a class="kratos-nav-toggle js-kratos-nav-toggle"><i></i></a></div>
+            <header id="kratos-header-section">
+                <div class="container">
+                    <div class="nav-header">
+                        <div class="color-logo"><a href="/">Asa</a></div>
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>Asa</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                <h1 class="kratos-entry-title text-center">php之日历项目实战经验</h1>
+                
+                <ul class="kratos-post-meta text-center">
+                    <li><i class="fa fa-calendar"></i> 2021-02-21</li>
+                    <li><i class="fa fa-user"></i> 作者 Asa</li>
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~12.01K
+                        
+                        字
+                    </li>
+                    
+                </ul>
+            </header>
+            <div class="kratos-post-content">
+                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                    本文最后编辑于 <time datetime="1614151144241"></time> 前，其中的内容可能需要更新。
+                </div>
+                
+                    <div class="kratos-post-inner-toc">
+                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%9A%E5%88%B6%E4%BD%9C%E6%97%A5%E5%8E%86"><span class="toc-number">1.</span> <span class="toc-text">第一个问题：制作日历</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#php%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%BB%BA%E7%AB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">php代码格式的建立</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#date%E5%87%BD%E6%95%B0%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4"><span class="toc-number">1.2.</span> <span class="toc-text">date函数获取当前系统时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#strtotime%E5%87%BD%E6%95%B0%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E6%88%B3"><span class="toc-number">1.3.</span> <span class="toc-text">strtotime函数获取时间戳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch%E8%AF%AD%E5%8F%A5%E5%88%A4%E6%96%AD%E5%B9%B4%E6%9C%88%E4%BB%BD"><span class="toc-number">1.4.</span> <span class="toc-text">switch语句判断年月份</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html5%E6%A0%87%E7%AD%BE%E6%9E%84%E5%BB%BA%E6%97%A5%E5%8E%86%E6%A1%86%E6%9E%B6"><span class="toc-number">1.5.</span> <span class="toc-text">html5标签构建日历框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for%E8%AF%AD%E5%8F%A5%E4%B8%8Eif%E8%AF%AD%E5%8F%A5%E5%88%A4%E6%96%AD%E8%BE%93%E5%87%BA"><span class="toc-number">1.6.</span> <span class="toc-text">for语句与if语句判断输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-number">1.7.</span> <span class="toc-text">完整代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%9A%E6%98%BE%E7%A4%BA%E4%B8%80%E5%B9%B4%E6%89%80%E6%9C%89%E6%97%A5%E5%8E%86"><span class="toc-number">2.</span> <span class="toc-text">第二个问题：显示一年所有日历</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8for%E5%BE%AA%E7%8E%AF%E8%BF%9B%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-number">2.1.</span> <span class="toc-text">使用for循环进行遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81-1"><span class="toc-number">2.2.</span> <span class="toc-text">完整代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%9A%E6%94%B9%E5%8F%98%E6%97%A5%E5%8E%86%E5%B9%B4%E4%BB%BD"><span class="toc-number">3.</span> <span class="toc-text">第三个问题：改变日历年份</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81-2"><span class="toc-number">3.1.</span> <span class="toc-text">完整代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+                    </div>
+                
+                <hr />
+                <p>本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、for循环语句、if条件判断语句).</p>
+<span id="more"></span>
+
+<p>首先开始，我们来看一下题目：</p>
+<blockquote>
+<p>“使用PHP中基本语法制作出一个类型windows日历那样的日历，之后再原有代码的基础上制作出一年之中12个月份的全部日历，最后再通过该日历去对不同的年份时间日历进行显示”。</p>
+</blockquote>
+<h1 id="第一个问题：制作日历"><a href="#第一个问题：制作日历" class="headerlink" title="第一个问题：制作日历"></a>第一个问题：制作日历</h1><h2 id="php代码格式的建立"><a href="#php代码格式的建立" class="headerlink" title="php代码格式的建立"></a>php代码格式的建立</h2><p>首先先建立一个PHP中代码的格式</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="date函数获取当前系统时间"><a href="#date函数获取当前系统时间" class="headerlink" title="date函数获取当前系统时间"></a>date函数获取当前系统时间</h2><p>之后如果我们要去识别系统上的时间，所以我们将使用date函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$year</span> = date(<span class="string">&#x27;Y&#x27;</span>);</span><br><span class="line"><span class="variable">$month</span> = date(<span class="string">&#x27;n&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>通过创建date函数语句去识别系统中的年和月，之后我们需要知道的是一个日历中我们首先是不是要知道一个月份中的第一天，之后后面的通过该月的第一天去对某个月份的日历中星期与日相对应，所以这时候需要去创建一个变量名为date的变量去存储该月份中第一天的时间。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$date</span> = <span class="string">&quot;<span class="subst">$year</span>-<span class="subst">$month</span>-1&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="strtotime函数获取时间戳"><a href="#strtotime函数获取时间戳" class="headerlink" title="strtotime函数获取时间戳"></a>strtotime函数获取时间戳</h2><p>之后是不是需要去创建一个strtotime函数去获取该月中第一天的时间戳</p>
+<blockquote>
+<p>strtotime函数是通过1970年1月1日算起的一个获取时间戳的函数</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$str</span> = strtotime(<span class="variable">$date</span>);</span><br></pre></td></tr></table></figure>
+
+<p>通过时间戳我们可以获得某月中第一天为星期几的数字值</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$fristday</span> = date(<span class="string">&#x27;w&#x27;</span>,<span class="variable">$str</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="switch语句判断年月份"><a href="#switch语句判断年月份" class="headerlink" title="switch语句判断年月份"></a>switch语句判断年月份</h2><p>之后我们还有一个问题，就是在一年之中闰年和非闰年中2月份的天数是不同的，所以这时候需要设计一个可以判断是否为润年的代码，已知闰年的判断是<b>①$year能被4整除且不能被100整除则为非闰年②$year能被400整除的是闰年，所以</b>：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (<span class="variable">$month</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : <span class="variable">$days</span> = (<span class="variable">$year</span> % <span class="number">400</span> == <span class="number">0</span>  || (<span class="variable">$year</span> % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; <span class="variable">$year</span> % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : <span class="variable">$days</span> = <span class="number">30</span> ; <span class="keyword">break</span> ;</span><br><span class="line">    <span class="keyword">default</span>: <span class="variable">$days</span> = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="html5标签构建日历框架"><a href="#html5标签构建日历框架" class="headerlink" title="html5标签构建日历框架"></a>html5标签构建日历框架</h2><p>通过switch语句去进行判断，判断系统的年份去判断该年是否为闰年，并且通过识别系统当前月份而去对该月份中天数进行判断。之后我们现在就该设计日历中类似windows10那样的日历框架(不知道的点击你电脑右下角的时间，没有win10的自己去装一个，实在不想装win10或者根本没有电脑百度总会了吧)<b>附链接</b>： <a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;table width = &#x27;366&#x27; border = &#x27;0&#x27; cellpading = &#x27;0&#x27; cellspacing = &#x27;2&#x27; align=&#x27;center&#x27;&gt;&quot;</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;caption&gt;下面是<span class="subst">$year</span> 年<span class="subst">$month</span> 月的日历&lt;/caption&gt;&quot;</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;tr align=&#x27;center&#x27;&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; height = &#x27;40&#x27;&gt; 一&lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;二&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; &gt; 三 &lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;四&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27;&gt; 五 &lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;六&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; &gt; 日 &lt;/th&gt; &quot;</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/th&gt;&lt;tr&gt;&quot;</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标记</span></span><br></pre></td></tr></table></figure>
+
+<p>通过表格来设计日历的框架，首先我们要先知道cellspacing是表格单元格间距设置为2像素，因为有八个边框所以总的width像素为16px，之后的350px我们将用来对日历中的列（每一列50px）进行设计，设计出类似windwos10日历中等宽等高的表格。</p>
+<p><b>注意：我们这一步的目的是需要计算出日历中每一格的宽度和高度，并对单元格间距之间也要进行计算，保证设计出来的日历是呈现一种整齐的效果。</b></p>
+<h2 id="for语句与if语句判断输出"><a href="#for语句与if语句判断输出" class="headerlink" title="for语句与if语句判断输出"></a>for语句与if语句判断输出</h2><p>由于我们日历第一列为星期一，但是有的月数第一天不是星期一，而是星期二，这时候我们需要通过for与if语句进行判断，之后输出一个空单元格使之向后面移一位或者几位，达到日与星期对齐的效果，并且星期日在date(‘w’)中为0，还需要通过if去判断是否为星期天</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="variable">$firstDay</span>==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    <span class="variable">$r</span> = <span class="number">7</span>;  </span><br><span class="line">    <span class="variable">$firstDay</span>= <span class="variable">$r</span>; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="variable">$firstDay</span> ; <span class="variable">$i</span>++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td&gt;&lt;/td&gt;&quot;</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="variable">$firstDay</span> ; <span class="variable">$i</span>++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td&gt;&lt;/td&gt;&quot;</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>之后我们需要知道整个月的时间，就对$day进行遍历</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt;= <span class="variable">$days</span> ; <span class="variable">$i</span>++) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到星期日之后我们还需要让他换行</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ((<span class="variable">$i</span> + <span class="variable">$firstDay</span> <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;/tr&gt;&lt;tr&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这时候我们还需要明确知道今天为几日，我们需要通过设置一个css样式表改变表格中某个单元格的格式，也就是“高亮效果”</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /* 定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>最后关键的一步，判断是否为今天，是今天则使用CSS样式表，不是就不使用CSS样式表</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable">$i</span> == date(<span class="string">&#x27;j&#x27;</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td align = &#x27;center&#x27; height = &#x27;30&#x27; class = &#x27;tdBorder&#x27;&gt;&quot;</span> . <span class="variable">$i</span> . <span class="string">&quot;&lt;/td&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td align = &#x27;center&#x27; height = &#x27;30&#x27; &gt;&quot;</span> . <span class="variable">$i</span> . <span class="string">&quot;&lt;/td&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后输出结束的标记和表格结束的标记</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/tr&gt;&lt;/table&gt;&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /* 定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$year</span> = date(<span class="string">&#x27;Y&#x27;</span>);</span><br><span class="line"><span class="variable">$month</span> = date(<span class="string">&#x27;n&#x27;</span>);</span><br><span class="line"><span class="variable">$date</span> = <span class="string">&quot;<span class="subst">$year</span>-<span class="subst">$month</span>-1&quot;</span>; <span class="comment">//获取当前月第一天的日期格式，如“2018-5-1”。</span></span><br><span class="line"><span class="variable">$str</span> = strtotime(<span class="variable">$date</span>); <span class="comment">//获取指定年份月份第一天的时间戳</span></span><br><span class="line"><span class="variable">$firstDay</span> = date(<span class="string">&#x27;w&#x27;</span>,<span class="variable">$str</span>); <span class="comment">//获取指定时间戳对应的星期几的数字值</span></span><br><span class="line"><span class="comment">//下面获取当前月份的天数</span></span><br><span class="line"><span class="keyword">switch</span> (<span class="variable">$month</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : <span class="variable">$days</span> = (<span class="variable">$year</span> % <span class="number">400</span> == <span class="number">0</span>  || (<span class="variable">$year</span> % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; <span class="variable">$year</span> % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : <span class="variable">$days</span> = <span class="number">30</span> ; <span class="keyword">break</span> ;</span><br><span class="line">    <span class="keyword">default</span>: <span class="variable">$days</span> = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;table width = &#x27;366&#x27; border = &#x27;0&#x27; cellpading = &#x27;0&#x27; cellspacing = &#x27;2&#x27; align=&#x27;center&#x27;&gt;&quot;</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;caption&gt;下面是<span class="subst">$year</span> 年<span class="subst">$month</span> 月的日历&lt;/caption&gt;&quot;</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;tr align=&#x27;center&#x27;&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; height = &#x27;40&#x27;&gt; 一&lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;二&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; &gt; 三 &lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;四&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27;&gt; 五 &lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;六&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; &gt; 日 &lt;/th&gt; &quot;</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/th&gt;&lt;tr&gt;&quot;</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标</span></span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$firstDay</span>==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    <span class="variable">$r</span> = <span class="number">7</span>;  </span><br><span class="line">    <span class="variable">$firstDay</span>= <span class="variable">$r</span>; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="variable">$firstDay</span> ; <span class="variable">$i</span>++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">     <span class="keyword">echo</span> <span class="string">&quot;&lt;td&gt;&lt;/td&gt;&quot;</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="variable">$firstDay</span> ; <span class="variable">$i</span>++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td&gt;&lt;/td&gt;&quot;</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt;= <span class="variable">$days</span> ; <span class="variable">$i</span>++) &#123;</span><br><span class="line">    <span class="keyword">if</span> ((<span class="variable">$i</span> + <span class="variable">$firstDay</span> <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;/tr&gt;&lt;tr&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$i</span> == date(<span class="string">&#x27;j&#x27;</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td align = &#x27;center&#x27; height = &#x27;30&#x27; class = &#x27;tdBorder&#x27;&gt;&quot;</span> . <span class="variable">$i</span> . <span class="string">&quot;&lt;/td&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td align = &#x27;center&#x27; height = &#x27;30&#x27; &gt;&quot;</span> . <span class="variable">$i</span> . <span class="string">&quot;&lt;/td&gt;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/tr&gt;&lt;/table&gt;&quot;</span>; <span class="comment">//输出最后一行结束的标记和表格结束的标记</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="第二个问题：显示一年所有日历"><a href="#第二个问题：显示一年所有日历" class="headerlink" title="第二个问题：显示一年所有日历"></a>第二个问题：显示一年所有日历</h1><h2 id="使用for循环进行遍历"><a href="#使用for循环进行遍历" class="headerlink" title="使用for循环进行遍历"></a>使用for循环进行遍历</h2><p>这个问题可以通过for循环来完成，首先在原有的代码上进行循环也就是</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="variable">$n</span>=<span class="number">1</span>; <span class="variable">$n</span> &lt;=<span class="number">12</span> ; <span class="variable">$n</span>++) &#123;<span class="comment">//循环遍历一年中12个月的日历</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>之后改变$month</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$month</span> = <span class="variable">$n</span>;  <span class="comment">//通过for循环中的数值赋值给$month</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="完整代码-1"><a href="#完整代码-1" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /*定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$n</span>=<span class="number">1</span>; <span class="variable">$n</span> &lt;=<span class="number">12</span> ; <span class="variable">$n</span>++) &#123;  <span class="comment">//循环遍历一年中12个月的日历</span></span><br><span class="line"><span class="variable">$year</span> = date(<span class="string">&#x27;Y&#x27;</span>);</span><br><span class="line"><span class="variable">$month</span> = <span class="variable">$n</span>;  <span class="comment">//通过for循环中的数值赋值给$month</span></span><br><span class="line"><span class="variable">$date</span> = <span class="string">&quot;<span class="subst">$year</span>-<span class="subst">$month</span>-1&quot;</span>; <span class="comment">//获取当前月第一天的日期格式，如“2018-5-1”。</span></span><br><span class="line"><span class="variable">$str</span> = strtotime(<span class="variable">$date</span>); <span class="comment">//获取指定年份月份第一天的时间戳</span></span><br><span class="line"><span class="variable">$firstDay</span> = date(<span class="string">&#x27;w&#x27;</span>,<span class="variable">$str</span>);  <span class="comment">//获取指定时间戳对应的星期几的数字值</span></span><br><span class="line"><span class="comment">//下面获取当前月份的天数</span></span><br><span class="line"><span class="keyword">switch</span> (<span class="variable">$n</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : <span class="variable">$days</span> = (<span class="variable">$year</span> % <span class="number">400</span> == <span class="number">0</span>  || (<span class="variable">$year</span> % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; <span class="variable">$year</span> % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> : </span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : <span class="variable">$days</span> = <span class="number">30</span> ; <span class="keyword">break</span> ; <span class="comment">//4、6、9、11月为30天</span></span><br><span class="line">    <span class="keyword">default</span>: <span class="variable">$days</span> = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;table width = &#x27;366&#x27; border = &#x27;0&#x27; cellpading = &#x27;0&#x27; cellspacing = &#x27;2&#x27; align=&#x27;center&#x27;&gt;&quot;</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;caption&gt;下面是<span class="subst">$year</span> 年<span class="subst">$month</span> 月的日历&lt;/caption&gt;&quot;</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;tr align=&#x27;center&#x27;&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; height = &#x27;40&#x27;&gt; 一&lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;二&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; &gt; 三 &lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;四&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27;&gt; 五 &lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;六&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; &gt; 日 &lt;/th&gt; &quot;</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/th&gt;&lt;tr&gt;&quot;</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标记</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$firstDay</span>==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    <span class="variable">$r</span> = <span class="number">7</span>;  </span><br><span class="line">    <span class="variable">$firstDay</span>= <span class="variable">$r</span>; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="variable">$firstDay</span> ; <span class="variable">$i</span>++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td&gt;&lt;/td&gt;&quot;</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="variable">$firstDay</span> ; <span class="variable">$i</span>++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&quot;&lt;td&gt;&lt;/td&gt;&quot;</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt;= <span class="variable">$days</span> ; <span class="variable">$i</span>++) &#123;</span><br><span class="line">    <span class="keyword">if</span> ((<span class="variable">$i</span> + <span class="variable">$firstDay</span> <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;/tr&gt;&lt;tr&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$i</span> == date(<span class="string">&#x27;j&#x27;</span>) &amp;&amp; <span class="variable">$n</span> == date(<span class="string">&#x27;n&#x27;</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td align = &#x27;center&#x27; height = &#x27;30&#x27; class = &#x27;tdBorder&#x27;&gt;&quot;</span> . <span class="variable">$i</span> . <span class="string">&quot;&lt;/td&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td align = &#x27;center&#x27; height = &#x27;30&#x27; &gt;&quot;</span> . <span class="variable">$i</span> . <span class="string">&quot;&lt;/td&gt;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/tr&gt;&lt;/table&gt;&quot;</span>; <span class="comment">//输出最后一行结束的标记和表格结束的标记</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="第三个问题：改变日历年份"><a href="#第三个问题：改变日历年份" class="headerlink" title="第三个问题：改变日历年份"></a>第三个问题：改变日历年份</h1><p>我们以下一年为例，将$year进行改变</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$year</span> = date(<span class="string">&#x27;Y&#x27;</span>,strtotime(<span class="string">&quot;+1 year&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="完整代码-2"><a href="#完整代码-2" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /*定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$n</span>=<span class="number">1</span>; <span class="variable">$n</span> &lt;=<span class="number">12</span> ; <span class="variable">$n</span>++) &#123;  <span class="comment">//循环遍历一年中12个月的日历</span></span><br><span class="line"><span class="variable">$year</span> = date(<span class="string">&#x27;Y&#x27;</span>,strtotime(<span class="string">&quot;+1 year&quot;</span>));<span class="comment">//通过修改变量year时间戳达到下一年的效果</span></span><br><span class="line"><span class="variable">$month</span> = <span class="variable">$n</span>;  <span class="comment">//通过for循环中的数值赋值给$month</span></span><br><span class="line"><span class="variable">$date</span> = <span class="string">&quot;<span class="subst">$year</span>-<span class="subst">$month</span>-1&quot;</span>; <span class="comment">//获取当前月第一天的日期格式，如“2018-5-1”。</span></span><br><span class="line"><span class="variable">$str</span> = strtotime(<span class="variable">$date</span>); <span class="comment">//获取指定年份月份第一天的时间戳</span></span><br><span class="line"><span class="variable">$firstDay</span> = date(<span class="string">&#x27;w&#x27;</span>,<span class="variable">$str</span>);  <span class="comment">//获取指定时间戳对应的星期几的数字值</span></span><br><span class="line"><span class="comment">//下面获取当前月份的天数</span></span><br><span class="line"><span class="keyword">switch</span> (<span class="variable">$n</span>) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : <span class="variable">$days</span> = (<span class="variable">$year</span> % <span class="number">400</span> == <span class="number">0</span>  || (<span class="variable">$year</span> % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; <span class="variable">$year</span> % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> : </span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : <span class="variable">$days</span> = <span class="number">30</span> ; <span class="keyword">break</span> ; <span class="comment">//4、6、9、11月为30天</span></span><br><span class="line">    <span class="keyword">default</span>: <span class="variable">$days</span> = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;table width = &#x27;366&#x27; border = &#x27;0&#x27; cellpading = &#x27;0&#x27; cellspacing = &#x27;2&#x27; align=&#x27;center&#x27;&gt;&quot;</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;caption&gt;下面是<span class="subst">$year</span> 年<span class="subst">$month</span> 月的日历&lt;/caption&gt;&quot;</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;tr align=&#x27;center&#x27;&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; height = &#x27;40&#x27;&gt; 一&lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;二&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; &gt; 三 &lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;四&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27;&gt; 五 &lt;/th&gt; &lt;th width = &#x27;50&#x27;&gt;六&lt;/th&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;th width = &#x27;50&#x27; &gt; 日 &lt;/th&gt; &quot;</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/th&gt;&lt;tr&gt;&quot;</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标记</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$firstDay</span>==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    <span class="variable">$r</span> = <span class="number">7</span>;  </span><br><span class="line">    <span class="variable">$firstDay</span>= <span class="variable">$r</span>; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="variable">$firstDay</span> ; <span class="variable">$i</span>++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td&gt;&lt;/td&gt;&quot;</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt; <span class="variable">$firstDay</span> ; <span class="variable">$i</span>++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&quot;&lt;td&gt;&lt;/td&gt;&quot;</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$i</span>=<span class="number">1</span>; <span class="variable">$i</span> &lt;= <span class="variable">$days</span> ; <span class="variable">$i</span>++) &#123;</span><br><span class="line">    <span class="keyword">if</span> ((<span class="variable">$i</span> + <span class="variable">$firstDay</span> <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;/tr&gt;&lt;tr&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$i</span> == date(<span class="string">&#x27;j&#x27;</span>) &amp;&amp; <span class="variable">$n</span> == date(<span class="string">&#x27;n&#x27;</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td align = &#x27;center&#x27; height = &#x27;30&#x27; class = &#x27;tdBorder&#x27;&gt;&quot;</span> . <span class="variable">$i</span> . <span class="string">&quot;&lt;/td&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;&lt;td align = &#x27;center&#x27; height = &#x27;30&#x27; &gt;&quot;</span> . <span class="variable">$i</span> . <span class="string">&quot;&lt;/td&gt;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;/tr&gt;&lt;/table&gt;&quot;</span>; <span class="comment">//输出最后一行结束的标记和表格结束的标记</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>该题目并不是很难，只要熟练掌握php基础语法基本上可以写出这种题，需要注意的也就日历框架的构建，以及各种逻辑思维的判断（例：星期日在date(‘w’)中为0，需要对星期日重新判断等）和时间戳的使用。</p>
+
+            </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://example.com/2021/02/21/php/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://example.com/2021/02/21/php/";
+            const title         = "「php之日历项目实战经验」";
+            const excerpt       = `本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、for循环语句、if条件判断语句).`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/PHP/" rel="tag">PHP</a>, <a class="tag-none-link" href="/tags/PHP%E5%AE%9E%E6%88%98/" rel="tag">PHP实战</a>, <a class="tag-none-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/" rel="tag">学习分享</a>
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2021-02-24</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+            <nav class="navigation post-navigation clearfix" role="navigation">
+                
+                <div class="nav-previous clearfix">
+                    <a title=" java基础语法学习笔记" href="/2021/02/21/java/">&lt; 上一篇</a>
+                </div>
+                
+                
+            </nav>
+        
+        
+    </article>
+</section>
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm sticky-area">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area-disabled">
+    
+    <!-- 这里现在还是个坑 -->
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/logo.jpg" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">学习交流</p>
+    </div>
+</aside>
+            
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%9A%E5%88%B6%E4%BD%9C%E6%97%A5%E5%8E%86"><span class="toc-text">第一个问题：制作日历</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#php%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%BB%BA%E7%AB%8B"><span class="toc-text">php代码格式的建立</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#date%E5%87%BD%E6%95%B0%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4"><span class="toc-text">date函数获取当前系统时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#strtotime%E5%87%BD%E6%95%B0%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E6%88%B3"><span class="toc-text">strtotime函数获取时间戳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch%E8%AF%AD%E5%8F%A5%E5%88%A4%E6%96%AD%E5%B9%B4%E6%9C%88%E4%BB%BD"><span class="toc-text">switch语句判断年月份</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html5%E6%A0%87%E7%AD%BE%E6%9E%84%E5%BB%BA%E6%97%A5%E5%8E%86%E6%A1%86%E6%9E%B6"><span class="toc-text">html5标签构建日历框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for%E8%AF%AD%E5%8F%A5%E4%B8%8Eif%E8%AF%AD%E5%8F%A5%E5%88%A4%E6%96%AD%E8%BE%93%E5%87%BA"><span class="toc-text">for语句与if语句判断输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-text">完整代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%9A%E6%98%BE%E7%A4%BA%E4%B8%80%E5%B9%B4%E6%89%80%E6%9C%89%E6%97%A5%E5%8E%86"><span class="toc-text">第二个问题：显示一年所有日历</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8for%E5%BE%AA%E7%8E%AF%E8%BF%9B%E8%A1%8C%E9%81%8D%E5%8E%86"><span class="toc-text">使用for循环进行遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81-1"><span class="toc-text">完整代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%9A%E6%94%B9%E5%8F%98%E6%97%A5%E5%8E%86%E5%B9%B4%E4%BB%BD"><span class="toc-text">第三个问题：改变日历年份</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81-2"><span class="toc-text">完整代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+</aside>
+                
+                
+  <aside id="krw-categories" class="widget widget-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">1</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/PHP/" style="font-size: 0.6em;">PHP</a> <a href="/tags/PHP%E5%AE%9E%E6%88%98/" style="font-size: 0.6em;">PHP实战</a> <a href="/tags/java%E5%AD%A6%E4%B9%A0/" style="font-size: 0.6em;">java学习</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/" style="font-size: 0.8em;">学习分享</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 0.6em;">学习笔记</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2021/02/21/php/"><i class="fa  fa-book"></i> php之日历项目实战经验</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/02/21/java/"><i class="fa  fa-book"></i> java基础语法学习笔记</a>
+            
+          
+        
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  >
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2021 Asa 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Made with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by <a href="https://candinya.com" target="_blank" rel="nofollow">Candinya</a>.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+    <div>
+        <canvas id="snow"></canvas>
+        <script async type="text/javascript" src="/js/snow.min.js"></script>
+    </div>
+
+<script async src="/js/candy.min.js"></script>
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+    <script defer src="/js/kr-dark.min.js"></script>
+
+
+    </body>
+</html>
