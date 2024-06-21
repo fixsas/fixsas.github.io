@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Categories | Motwt、Blog</title>
+  <title>分类 | Motwt、Blog</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -449,13 +449,13 @@
         <h2>
           <span>
             <i class="fas fa-search" aria-hidden="true"></i>
-            <span class="title">Search</span>
+            <span class="title">本地搜索</span>
           </span>
           <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
-            placeholder="Please enter keywords"
+            placeholder="请输入关键字"
             id="local-search-input" 
             @click="getSearchFile()"
             class="st-search-input"
@@ -561,7 +561,7 @@
     <div class="card">
         <div class="card-content">
             <div class="category-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;Article Categories
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="category-chips">
                 
@@ -574,18 +574,18 @@
                 </a>
                 
                 
-                <a href="/categories/PHP/" title="PHP: 1">
-                    <span class="category-content"
-                        title="PHP" style="background-color: #85C1E9;">PHP
-                        <span class="category-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/categories/Python/" title="Python: 3">
                     <span class="category-content"
                         title="Python" style="background-color: #F5EEF8;">Python
                         <span class="category-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/PHP/" title="PHP: 1">
+                    <span class="category-content"
+                        title="PHP" style="background-color: #85C1E9;">PHP
+                        <span class="category-length">1</span>
                     </span>
                 </a>
                 
@@ -780,11 +780,11 @@
             <!-- 不蒜子统计 -->
             <!-- 不蒜子统计 -->
 <span id="busuanzi_container_site_pv">
-      <i class="fas fa-eye" aria-hidden="true"></i>Total visits：<span id="busuanzi_value_site_pv"></span> times
+      <i class="fas fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
 </span>
 <span class="post-meta-divider">|</span>
 <span id="busuanzi_container_site_uv" style='display:none'>
-      <i class="fas fa-users" aria-hidden="true"></i>Number of visitors：<span id="busuanzi_value_site_uv"></span> people
+      <i class="fas fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
 </span>
 
           
@@ -1128,7 +1128,7 @@
       },
       mounted() {
         const that = this;
-        var copy = 'copy';
+        var copy = '复制';
         /* code */
         var initCopyCode = function () {
           var copyHtml = '';

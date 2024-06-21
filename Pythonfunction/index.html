@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Python杨辉三角题目实战 | Motwt、Blog</title>
+  <title>Python函数题目实战 | Motwt、Blog</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -449,13 +449,13 @@
         <h2>
           <span>
             <i class="fas fa-search" aria-hidden="true"></i>
-            <span class="title">Search</span>
+            <span class="title">本地搜索</span>
           </span>
           <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
-            placeholder="Please enter keywords"
+            placeholder="请输入关键字"
             id="local-search-input" 
             @click="getSearchFile()"
             class="st-search-input"
@@ -537,30 +537,30 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp')">
+  background-position: center center;position: relative;background-image:url('https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        Python杨辉三角题目实战
+        Python函数题目实战
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2023-04-25 |
+          <i class="fas fa-calendar"></i> 发表于：2023-05-17 |
         </span>
       
 
       
         <span class="post-detail-header_categories">
-          <i class="iconfont iconbookmark1"></i> category：
+          <i class="iconfont iconbookmark1"></i> 分类：
           
-            <a href="/categories/Python/" class="post-detail-header_category">
-              Python
+            <a href="/categories/Java/" class="post-detail-header_category">
+              Java
             </a>
           
         </span>
@@ -584,115 +584,155 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <p>本次所涉及到的知识有：列表(List)、列表嵌套、del方法、len方法、insert方法。</p>
+        <p>本次所涉及到的知识有：python定义函数(def)、调用函数、函数的参数、函数的返回值。</p>
 <span id="more"></span>
 
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">某日，李子从一座山前路过，李子慢慢悠悠的走过这座山时，发现这座山的山脚下竟然插着一个告示牌，李子觉得很奇怪，一个平平无奇的山竟然有人在这里插牌，难不出有山神在此，凡人不敢冒犯？还是某个隐居在此的大罗金仙？听说四海之国的大罗金仙今日出没在这个湖中山脉里，难不成真的是他？。。。。。。<p>
+<h2 id="Actual-Combat-Question"><a href="#Actual-Combat-Question" class="headerlink" title="Actual Combat Question"></a>Actual Combat Question</h2><blockquote>
+<p>(一)分别定义两个函数：max_divider、min_multipliter，返回两个数（从键盘输入的整数）中的最大公约数和最小公倍数。</p>
+<p>举例如下所示：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入第<span class="number">1</span>个整数:<span class="number">4</span></span><br><span class="line">请输入第<span class="number">1</span>个整数:<span class="number">6</span></span><br><span class="line">最大公约数为:<span class="number">2</span></span><br><span class="line">最小公倍数为:<span class="number">12</span></span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">就在李子站在山脚深思的时候，告示牌突然发出金光，李子越发觉得奇怪。</p>
+<p>(二) 猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个。第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃前一天剩下的一半零一个。到第十天早上想再吃时，见只剩下一个桃子了。求第一天共摘多少个桃子？编写函数得到猴子第一天桃子的数量。</p>
+<p>(三)一只球从80m高度自由下落，每次落地后返回原高度的一半，在落下。求：它在第10次落地时共经过多少米？第10次反弹多高？编写函数实现。</p>
+<p>(四)编写函数，求出1+（1+2）+（1+2+3）+····+（1+2+3+4+···+n）的和，函数以n为参数，n由用户从键盘输入。</p>
+<p>(五)编写函数，验证哥德巴赫猜想，即任何一个大于6的偶数均可以表示成两个素数之和。</p>
+</blockquote>
+<h2 id="Question-One"><a href="#Question-One" class="headerlink" title="Question One"></a>Question One</h2><p>First，create two function in order to in base，because of  programe require retrue two number and require is a max_divider function and min_multipliter function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create two function in programe order to base</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">max_divider</span>():</span><br><span class="line">    <span class="comment"># user input type int number</span></span><br><span class="line">    a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第一个整数：&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">min_multipliter</span>():</span><br><span class="line">    <span class="comment"># user input type int number</span></span><br><span class="line">    b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第一个整数：&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> b</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">"是哪位神仙在此？在下是星梦国度的金牌狩猎者李子，路过此地，无意冒犯。"李子试探性的对周围拱了拱手。</p>
+<p>Great，after create two function，you need call these two function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># call name max_divider function</span></span><br><span class="line">c = max_divider()</span><br><span class="line"><span class="comment"># call name min_multipliter function</span></span><br><span class="line">d = min_multipliter()</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">李子等待了一炷香的时间，发现自己的声音没有得到任何回应，便松了一口气："应该不是那位大罗金仙了，不过就算是临其境，也应该是我能够对付的。"</p>
+<p>I use lists to solve this problem，so i will create three null list。first list <code>(list)</code> in order to append fin ally result，second list <code>(list1)</code> in order to append result in max_divider user input，third list <code>(list2)</code> in order to append result in min_multipliter user input。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br><span class="line">list1 = []</span><br><span class="line">list2 = [] </span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">观察到周围没什么动静，他大步流星的上前观看告示牌上的信息，发现竟是一个阵法，李子仔细端详着这个阵法，片刻，他倒吸了一口凉气："这竟然是上古之时的阵法大能者杨辉《详解九章算法》中的杨辉三角阵。"</p>
+<p>OK，start structure max_divider <code>(Greatest Common Divisor)</code> code。why is a Greatest Common Divisor? In short, the number that can divide a number is the divisor of the number, and the number that can be divided by a number is the multiple of the number。</p>
+<p>Example：</p>
+<blockquote>
+<p>number1 &#x3D; 12(It’s divisible the number:1,2,3,4,6,12)</p>
+<p>number2 &#x3D; 18(It’s divisible the number:1,2,3,6,9,18)</p>
+<p>Greatest Common Divisor  &#x3D; 6</p>
+</blockquote>
+<p style="text-align:justify; text-justify:inter-ideograph;">So，i will make for loop ergodic variable c and variable d，after give zero to variable rang every number divide user input the number，decide these number divide variable c and variable b whether to be divisible by，last save in null list。</p>
 
-<p>（此阵题目）</p>
-<div class="note info"><p><strong>此阵题目</strong></p><p> 编写一个python程序，打印出10行的杨辉三角，具体输出结果如下:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">6</span>, <span class="number">15</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">6</span>, <span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">7</span>, <span class="number">21</span>, <span class="number">35</span>, <span class="number">35</span>, <span class="number">21</span>, <span class="number">7</span>, <span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">8</span>, <span class="number">28</span>, <span class="number">56</span>, <span class="number">70</span>, <span class="number">56</span>, <span class="number">28</span>, <span class="number">8</span>, <span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">9</span>, <span class="number">36</span>, <span class="number">84</span>, <span class="number">126</span>, <span class="number">126</span>, <span class="number">84</span>, <span class="number">36</span>, <span class="number">9</span>, <span class="number">1</span>]</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(c):</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> c % i == <span class="number">0</span>:</span><br><span class="line">        list1.append(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(d):</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> d % i == <span class="number">0</span>:</span><br><span class="line">        list2.append(i)</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">"今日一见，果真名不虚传，此阵题摆在这里又是何意？难道.....我今天恰好经过此地，又恰好看到这个告示牌，又恰好知道这个题目....."</p>
+<p>Decide alike number save in <code>list</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="comment"># screen alike number</span></span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> list2:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">李子觉得自己好像被人给卖了一样，浑身上下都觉得不舒服，思考了一下决定先离开此地，在好好问问那些知道我行程的”好兄弟“。</p>
+<p>Finally，by using sort method and flashback method, the result is obtained <code>Greatest Common Divisor</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>.sort(reverse=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">就在这时，这座闪的山顶上竟然迸发出一道道强光，强光散发出骇人的能量波动，李子一时间祭出自己的最强的法宝来防备这次异像，就在李子以为这些强光冲自己来时，以李子为中心的地方包括整个湖中山脉都被一道道法阵给包围了起来，李子看到这种情况的时候，一时间心都凉了半解有余。</p>
+<p>After solve Greatest Common Divisor，now come to solve <code>Least Common Multiple</code>。</p>
+<p style="text-align:justify; text-justify:inter-ideograph;">What is a Least Common Multiple？the common multiple of two or more integers is called their common multiple, and the smallest common multiple except 0 is called the least common multiple of these integers。</p>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">他非常气愤地大声喊道：”是那位神仙想置李某人为死地，我好像没有和哪位神仙有过过节吧？就算你想置我于死地，你也知道每一位金牌都是拥有死命灯，就算我死了，你也要承担一个国度的怒火，你可要想清楚了，我李子可不是谁都能杀的！“李子一边心虚地大声向山顶喊去，一边在暗中准备自己最强的渡神法术。</p>
+<p>Example：</p>
+<blockquote>
+<p>number1 &#x3D; 4(multiple of this number:4,8,12,16,20,24……)</p>
+<p>number2 &#x3D; 6(multiple of this number:6,12,18,24,30,36……)</p>
+<p>Least Common Multiple &#x3D; 12</p>
+</blockquote>
+<p style="text-align:justify; text-justify:inter-ideograph;">is it exciting？yes this very interesting。same as the previous question create three list in order to solve Least Common Multiple the key，but functionally is alike。</p>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">就在这时，山顶好似回应李子一样，光柱越发粗壮，看到这种情况，李子脸一下就白了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br><span class="line">list1 = []</span><br><span class="line">list2 = [] </span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">"老子跟你拼了！不就是你死我活吗？今天就要让你看看我李子正真的实力。"李子的气势开始攀升，他想到现在最后的办法就是把杨辉三角阵给弄出来，这是他最后的机会。李子眼神微动，往地上盘膝而坐，开始了可能属于他这个人生中最后的战斗。</p>
+<p>This question i by  for loop from 1 to 1000 rang multiply user input number，after append in null list。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">1000</span>):</span><br><span class="line">    <span class="comment"># get max_divider from 1 to 1000 the product</span></span><br><span class="line">    e = c * i</span><br><span class="line">    list1.append(e)</span><br><span class="line">    <span class="comment"># get min_multipliter from 1 to 1000 the product</span></span><br><span class="line">    f = d * i</span><br><span class="line">    list2.append(f)</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">"通过嵌套列表的手法炼制基础容器，在通过列表材料制作第一个杨辉角。"李子的手开始动了起来，一个个材料在他熟练的嵌套列表手法上整齐排列了容器和第一个杨辉三角。</p>
+<p>Decide alike number save in <code>list</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="comment"># screen alike number</span></span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> list2:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list_f = [<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(list_f)</span><br><span class="line">list_1 = [[<span class="number">1</span>,<span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+<p>Finally ，because of get list in the smallest numberical value，so you don’t need using sort method。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最小公倍数为：&quot;</span>,<span class="built_in">list</span>[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">"好了，现在是最难部分了，这时需要while循环火元素对if元气块和列表材料进行进一步的炼制，炼制成所需材料的摸具，之后在放入其中的真气元素，形成一个上下互联左右互补的效果，最后成就杨辉三角阵。"</p>
+<h3 id="Complete-Code"><a href="#Complete-Code" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">max_divider</span>():</span><br><span class="line">    a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第一个整数：&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">min_multipliter</span>():</span><br><span class="line">    b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第一个整数：&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> b</span><br><span class="line">c = max_divider()</span><br><span class="line">d = min_multipliter()</span><br><span class="line"><span class="built_in">list</span> = []</span><br><span class="line">list1 = []</span><br><span class="line">list2 = [] </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(c):</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> c % i == <span class="number">0</span>:</span><br><span class="line">        list1.append(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(d):</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> d % i == <span class="number">0</span>:</span><br><span class="line">        list2.append(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> list2:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br><span class="line"><span class="built_in">list</span>.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最大公约数为：&quot;</span>,<span class="built_in">list</span>[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">list</span> = []</span><br><span class="line">list1 = []</span><br><span class="line">list2 = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">1000</span>):</span><br><span class="line">    e = c * i</span><br><span class="line">    list1.append(e)</span><br><span class="line">    f = d * i</span><br><span class="line">    list2.append(f)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> list2:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最小公倍数为：&quot;</span>,<span class="built_in">list</span>[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">李子准备好了脑中对应的炼制思路和真气逻辑，用自己的双手拍了拍他的脸颊，以一股一鼓作气的气势开始了他最艰难的挑战。</p>
+<h2 id="Question-Two"><a href="#Question-Two" class="headerlink" title="Question Two"></a>Question Two</h2><p>The second question is a classic question in programming：Monkey Pick Peaches</p>
+<p>This question the solving method use  <code>reverse reasoning</code>。by tenth day the peach number reverse reasoning first day peach number。</p>
+<p>Create peachNumber function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">peachNumber</span>():</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">他首先为while循环火元素准备引火材料，掏出了他珍藏已久的（i）至宝，一脸心疼的引燃了while循环火元素。</p>
+<p style="text-align:justify; text-justify:inter-ideograph;">In peachNumber function create daygetPeachNumber variable、i variable and Number10 variable，through these variable construct peachNumber function，achieve every day peach the number。</p>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">"这次如果成功逃出去了，应该让工会的人给我报销，不然老子血亏好吧。"</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">daygetPeachNumber = <span class="number">10</span></span><br><span class="line">i = <span class="number">1</span></span><br><span class="line">Number10 = <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>Create null list in order to append pick peach the number every days。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em">点染了while循环火元素，while循环火元素在李子的手里冉冉升起。</p>
+<p>At this time the most critical step has come，by the while loop obtain pick peach the number and will result append in list。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> daygetPeachNumber &gt; i:</span><br><span class="line">    <span class="comment"># obtain peach the number in every days</span></span><br><span class="line">    Number = (Number10 + <span class="number">1</span>) * <span class="number">2</span></span><br><span class="line">    <span class="comment"># append result to list</span></span><br><span class="line">    <span class="built_in">list</span>.append(Number)</span><br><span class="line">    <span class="comment"># maintain previous result constant</span></span><br><span class="line">    Number10 = Number</span><br><span class="line">    daygetPeachNumber -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> i &lt; <span class="number">9</span>:</span><br></pre></td></tr></table></figure>
+<p>Finally，reture result。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">在while循环火元素的加持下，李子发现自己的扔材料的速度跟不上它烧的速度，所以李子只能在扔i+2个（n）材料进去，当材料扔进去时，他已经处于一种无欲无求的境界。</p>
+<p>For the obtain final result create null list <code>list1</code> and use peachNumber function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = []</span><br><span class="line">list1 = peachNumber()</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">"如果真的....真的逃出去了，他不给我报销，我就打....打算换个地方发展好了。"</p>
+<p>Because i think print for tenth day to first day the result，so i use sort method。if you hope for first day to tenth day print result，then you don’t need to use sort method。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list1.sort(reverse=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n = i + <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>After by while loop print final result。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">9</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;第10天的桃子数为：&quot;</span>,<span class="number">1</span>)</span><br><span class="line"><span class="keyword">while</span> i &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;第%d天的挑子数为：%d&quot;</span> %(i,list1[i-<span class="number">1</span>]))</span><br><span class="line">    i -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">第一步奠基已经完成，现在需要的是对真气进行连接，首先连接一个名为processFlag的节点，保证下面的真气元素不会跑上面来，之后通过嵌套列表的手法放进放进真气元素。</p>
+<h3 id="Complete-Code-1"><a href="#Complete-Code-1" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">peachNumber</span>():</span><br><span class="line">    daygetPeachNumber = <span class="number">10</span></span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    Number10 = <span class="number">1</span></span><br><span class="line">    <span class="built_in">list</span> = []</span><br><span class="line">    <span class="keyword">while</span> daygetPeachNumber &gt; i:</span><br><span class="line">        Number = (Number10 + <span class="number">1</span>) * <span class="number">2</span></span><br><span class="line">        <span class="built_in">list</span>.append(Number)</span><br><span class="line">        Number10 = Number</span><br><span class="line">        daygetPeachNumber -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span></span><br><span class="line">list1 = []</span><br><span class="line">list1 = peachNumber()</span><br><span class="line">list1.sort(reverse=<span class="literal">True</span>)</span><br><span class="line">i = <span class="number">9</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;第10天的桃子数为：&quot;</span>,<span class="number">1</span>)</span><br><span class="line"><span class="keyword">while</span> i &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;第%d天的挑子数为：%d&quot;</span> %(i,list1[i-<span class="number">1</span>]))</span><br><span class="line">    i -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">processFlag = <span class="literal">True</span></span><br><span class="line">list_1.append([])</span><br><span class="line">list_1[i].append(<span class="number">1</span>)</span><br><span class="line">list_1[i] = list_1[i] * n</span><br></pre></td></tr></table></figure>
+<h2 id="Question-Three"><a href="#Question-Three" class="headerlink" title="Question Three"></a>Question Three</h2><p>This question at first glance it looks a physics problem。</p>
+<p>In fact，it is a simple physics problem，if you have not careful observed will step on the pit。</p>
+<p>OK，first this question have two problem，i will use two function（<code>calculationHeight</code> and <code>tenHeight</code>） solve this two problem in this question。</p>
+<p>Create first function calulation，solve how many meters did it pass on the 10th landing。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># incoming one height parameter</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculationHeight</span>(<span class="params">height</span>):</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">好了，第二步行基的雏形已经完成，现在需要对每一个容器里面的真气元素进行检查和判断数量的多少，保证下一步修改其每一个容器里面的真气元素对应杨辉三角阵所需的真气元素的数量。</p>
+<p>Because obtain total height，so find the height of each ball falling is divided by 2 on the basis of the first time and add。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="comment"># for storage final result</span></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line">    height1 = (height / <span class="number">2</span>)</span><br><span class="line">    <span class="built_in">sum</span> = <span class="built_in">sum</span> + height + height1</span><br><span class="line">    height = height1</span><br><span class="line">	i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">len</span>(list_1[i])</span><br></pre></td></tr></table></figure>
+<p>After that，you think by the while enough loop ten times obtain result ？NO！</p>
+<p>Here have a pit！if loop ten times obtain the result of the ball bounced on the tenth time。so ,we need loop nine times just fine。by <code>if</code> judgment obtain nine time the number and add for variable sum。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> i == <span class="number">9</span>:</span><br><span class="line">   <span class="built_in">sum</span> += height</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">修改容器中的真气元素时，李子掏出他紧剩无几的if元气块，if元气块所散发的气体让人欲罢不能，李子看着它吞了吞口水。</p>
+<p>Return variable <code>sum</code>，obtain  how many meters did it pass on the 10th landing the height。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="built_in">sum</span></span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">李子一副"大气凛然"的样子随手把if元气块抛入阵里："元气块算啥，活命才是王道！"</p>
+<p>Create second function tenHeight，solve how high is the 10th rebound。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">tenHeight</span>(<span class="params">num</span>):</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> a &gt;= <span class="number">3</span>:</span><br><span class="line">   b = a - <span class="number">1</span></span><br><span class="line">   list_1[i][<span class="number">1</span>] = b</span><br><span class="line"><span class="keyword">if</span> a &gt;= <span class="number">4</span>:</span><br><span class="line">   c = a - <span class="number">1</span></span><br><span class="line">   list_1[i][-<span class="number">2</span>] = c</span><br></pre></td></tr></table></figure>
+<p>Definition variable <code>height</code> assignment 80 the number and calculate the height of the ball。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">height = <span class="number">80</span></span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">通过if元气块的加持，李子发现还需要大量的元气块对真气元素做出更为细微的操作，于是他又抛出了大量的if元气块并通过for漩涡的炼制手法对容器里面的真气元素取出来并进行细微的操作和通过del工具对真气元素进行细微的删减，达到一种平衡的效果。因为阵中真气混杂不堪，所以通过之前的processFlag节点对真气元素进行精确的判断。</p>
+<p>After with same as the previous solution，fianlly by <code>if</code> judment obtain tenth time ball the height。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt;= <span class="number">10</span>:</span><br><span class="line">   height1 = (height / <span class="number">2</span>)</span><br><span class="line">   height = height1</span><br><span class="line">   <span class="keyword">if</span> i == <span class="number">10</span>:</span><br><span class="line">      <span class="built_in">sum</span> += height</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"><span class="keyword">return</span> <span class="built_in">sum</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> a &gt;= <span class="number">5</span>:</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,a-<span class="number">2</span>):</span><br><span class="line">       <span class="keyword">if</span> processFlag:</span><br><span class="line">          <span class="keyword">del</span> list_1[a-<span class="number">2</span>][<span class="number">2</span>:a-<span class="number">2</span>]</span><br><span class="line">       list_1[a-<span class="number">2</span>].insert(i,list_1[a - <span class="number">3</span>][i]+list_1[a - <span class="number">3</span>][i - <span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p>Use calculationHeight function and tenHeight function，print input final result。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># need for function incoming parameters(80、10)</span></span><br><span class="line">a = calculationHeight(<span class="number">80</span>)</span><br><span class="line">b = tenHeight(<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;它在第10次落地时共经过%f&quot;</span> %a,<span class="string">&quot;米&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;它在第10次反弹%f&quot;</span> %b,<span class="string">&quot;米&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">李子突然发觉阵中的稳定的真气元素要冲破他的禁制，霎时间，他通过processFlag节点对那些真气元素进行压缩稳定，保证它们不会受到其他因素的影响，当真气元素保持稳定时，李子松了一口气，因为差点就前功尽弃了。</p>
+<h3 id="Complete-Code-2"><a href="#Complete-Code-2" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#求球在80米反弹的高度问题</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculationHeight</span>(<span class="params">height</span>):</span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    <span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line">        height1 = (height / <span class="number">2</span>)</span><br><span class="line">        <span class="built_in">sum</span> = <span class="built_in">sum</span> + height + height1</span><br><span class="line">        height = height1</span><br><span class="line">        <span class="keyword">if</span> i == <span class="number">9</span>:</span><br><span class="line">            <span class="built_in">sum</span> += height</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">tenHeight</span>(<span class="params">num</span>):</span><br><span class="line">    height = <span class="number">80</span></span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    <span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;= <span class="number">10</span>:</span><br><span class="line">        height1 = (height / <span class="number">2</span>)</span><br><span class="line">        height = height1</span><br><span class="line">        <span class="keyword">if</span> i == <span class="number">10</span>:</span><br><span class="line">            <span class="built_in">sum</span> += height</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span></span><br><span class="line">a = calculationHeight(<span class="number">80</span>)</span><br><span class="line">b = tenHeight(<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;它在第10次落地时共经过%f&quot;</span> %a,<span class="string">&quot;米&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;它在第10次反弹%f&quot;</span> %b,<span class="string">&quot;米&quot;</span>)</span><br><span class="line"><span class="comment"># 它在第10次落地时共经过239.687500 米</span></span><br><span class="line"><span class="comment"># 它在第10次反弹0.078125 米</span></span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em">"就差一点了！"</p>
+<h2 id="Question-Four"><a href="#Question-Four" class="headerlink" title="Question Four"></a>Question Four</h2><p>The solution method of this question is similar to the second and third questions。by <code>while</code> obtain user input need multiply the number，by <code>for</code> obtain Sigma the effect。</p>
+<h3 id="Complete-Code-3"><a href="#Complete-Code-3" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#∑</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sigma</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line">    a = <span class="number">0</span></span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    f = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;= num:</span><br><span class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>):</span><br><span class="line">            a = a + f</span><br><span class="line">        <span class="built_in">sum</span> = <span class="built_in">sum</span> + a</span><br><span class="line">        a = <span class="number">0</span></span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span></span><br><span class="line">a = sigma(<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入一个整数：&quot;</span>)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;总和：&quot;</span>,a)</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">为了保证阵法的中材料（i）会因为之前的损耗而破坏容器，所以需要在运做一次真气的情况下增加材料（i）。</p>
+<h2 id="Question-Five"><a href="#Question-Five" class="headerlink" title="Question Five"></a>Question Five</h2><p>Before doing this question we need know <code>prime number</code> 。</p>
+<p><code>prime number</code>：a prime number refers to a natural number that has no other factors except 1 and itself among the natural numbers greater than 1。</p>
+<p>Example：</p>
+<blockquote>
+<p>3、5、7、11、13、17、19、23……..</p>
+</blockquote>
+<p>Create ColdbachConjecture function and incoming parameters num。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">GoldbachConjecture</span>(<span class="params">num</span>):</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>Construct a simple judgment through the concept of prime numbers and for result append null list。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,num):</span><br><span class="line">    fg = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,i-<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> i % j == <span class="number">0</span>:</span><br><span class="line">            fg = <span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> fg == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">且因为while循环火元素所消耗的材料（i），在每一次运行火元素都要对材料（i）进行补充，以保证容器的完整性以及杨辉三角阵所需容器的数量。</p>
+<p>Because question require even number than 6。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6</span>, num):</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        list1.append(i)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>Finally，by <code>for</code> loop and <code>if</code> judment decide this question and print result。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">   <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">      <span class="keyword">for</span> j <span class="keyword">in</span> list1:</span><br><span class="line">          <span class="keyword">if</span> i + h == j:</span><br><span class="line">             <span class="built_in">print</span>(<span class="string">&quot;%d + %d = %d&quot;</span>%(i,h,j))</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em">.........</p>
+<p>Use ColdbachConjecture function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GoldbachConjecture(<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入大于6的整数：&quot;</span>)))</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">在历经不到半炷香的时间内李子完成了所有的步骤，李子站了起来，看着山顶："你不是很nb吗？等下就让你知道我的厉害，别以为什么都在你的计划之内，我！李！子！可不是你能小瞧的！"</p>
+<h3 id="Complete-Code-4"><a href="#Complete-Code-4" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#哥德巴赫猜想</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">GoldbachConjecture</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="built_in">list</span> = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,num):</span><br><span class="line">        fg = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,i-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> i % j == <span class="number">0</span>:</span><br><span class="line">                fg = <span class="number">1</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> fg == <span class="number">0</span>:</span><br><span class="line">            <span class="built_in">list</span>.append(i)</span><br><span class="line">    list1 = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6</span>, num):</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">            list1.append(i)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> list1:</span><br><span class="line">                <span class="keyword">if</span> i + h == j:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&quot;%d + %d = %d&quot;</span>%(i,h,j))</span><br><span class="line">GoldbachConjecture(<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入大于6的整数：&quot;</span>)))</span><br></pre></td></tr></table></figure>
 
-<p style="text-indent:2em">李子突然大吼一声；"融合！"</p>
 
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">只见李子使用for漩涡炼制手法对地上的阵法进行炼制，不到片刻，天空乌云密布，雷声作响，远处好似出现远古生物的吼叫，整个山脉都被一个散发金光的三角形所笼罩。</p>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">9</span>):</span><br><span class="line">    <span class="built_in">print</span>(list_1[y])</span><br></pre></td></tr></table></figure>
-
-<p style="text-indent:2em">"这就是杨辉三角的力量，受死吧，辣鸡！"</p>
-
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">只见李子双手结阵，左右变化，形成一个三角形，三角形在李子手里不断散发着金光，整个山脉也被金光所笼罩。最后，无限放大的金光突破天际，冲破了之前的屏障，整个山脉都为止振动，很多人都纷纷往这里赶，想要查看这里所谓的天地异象到底是什么，但是，当金光散去时，这里除了有一座山脉之外，什么都没有。</p>
-
-<p style="text-indent:2em">处在千里之外的李子一边大口喘气一边往前飞。</p>
-
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">"真是天助我也，幸好老子跑得块，死不掉，之后得慢慢查查看，看到底是谁坑了老子！"李子显得愤愤不平，仿佛有一个血海深仇要报似的。</p>
-
-<p style="text-indent:2em">"哦？尔等就这水平？还想要报仇？"</p>
-
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">一个轻蔑的女声在李子的身旁的响起，李子忽然感到一阵恶寒，随即加快了飞行的速度，头也不回般的往前飞。</p>
-
-<p style="text-indent:2em;text-align:justify; text-justify:inter-ideograph;">如果李子往后看的话，就会发现在刚才听到声音的地方，有一个穿着黑色裙子带着面纱的少女站在那里，她看着李子方向露出了一个不可名状的笑容，便消失在原地。</p>
-
-<p style="text-align:center;color:red">（已完无待续）</p>
-
-<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#杨辉三角</span></span><br><span class="line"><span class="comment">#首先定义一个列表，打印杨辉三角的第一行</span></span><br><span class="line">list_f = [<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(list_f)</span><br><span class="line"><span class="comment">#定义一个嵌套列表</span></span><br><span class="line">list_1 = [[<span class="number">1</span>,<span class="number">1</span>]]</span><br><span class="line"><span class="comment">#定义变量i</span></span><br><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="comment">#通过while循环打印杨辉三角的列表</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">9</span>:</span><br><span class="line">    <span class="comment">#定义变量n对列表中的元素进行打印</span></span><br><span class="line">    n = i + <span class="number">2</span></span><br><span class="line">    <span class="comment">#定一个为True的布尔值为下面判断修改元素做好基础条件</span></span><br><span class="line">    processFlag = <span class="literal">True</span></span><br><span class="line">    <span class="comment">#通过apppend函数增加嵌套列表中的空列表</span></span><br><span class="line">    list_1.append([])</span><br><span class="line">    <span class="comment">#通过append函数对空列表进行增加数值为1的元素</span></span><br><span class="line">    list_1[i].append(<span class="number">1</span>)</span><br><span class="line">    <span class="comment">#通过乘积运算为列表增加*n的元素</span></span><br><span class="line">    list_1[i] = list_1[i] * n</span><br><span class="line">    <span class="comment">#定义一个变量a</span></span><br><span class="line">    <span class="comment">#该变量是为了算出列表中所含元素的数量</span></span><br><span class="line">    a = <span class="built_in">len</span>(list_1[i])</span><br><span class="line">    <span class="comment">#通过if对列表中元素的数量进行判断</span></span><br><span class="line">    <span class="keyword">if</span> a &gt;= <span class="number">3</span>:</span><br><span class="line">        <span class="comment">#对列表元素数量大于等于3的列表中的索引进行修改</span></span><br><span class="line">        b = a - <span class="number">1</span></span><br><span class="line">        list_1[i][<span class="number">1</span>] = b</span><br><span class="line">    <span class="keyword">if</span> a &gt;= <span class="number">4</span>:</span><br><span class="line">        c = a - <span class="number">1</span></span><br><span class="line">        list_1[i][-<span class="number">2</span>] = c</span><br><span class="line">    <span class="keyword">if</span> a &gt;= <span class="number">5</span>:</span><br><span class="line">        <span class="comment">#通过for循环对变量a到a减2的范围进行遍历</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,a-<span class="number">2</span>):</span><br><span class="line">            <span class="comment">#判断proocessFlag是否为True</span></span><br><span class="line">            <span class="keyword">if</span> processFlag:</span><br><span class="line">                <span class="comment">#删减列表中2到倒数第2个索引的范围内所有的元素</span></span><br><span class="line">                <span class="keyword">del</span> list_1[a-<span class="number">2</span>][<span class="number">2</span>:a-<span class="number">2</span>]</span><br><span class="line">            <span class="comment">#从列表的中间进行插值，通过上一行的元素进行加法运算</span></span><br><span class="line">            list_1[a-<span class="number">2</span>].insert(i,list_1[a - <span class="number">3</span>][i]+list_1[a - <span class="number">3</span>][i - <span class="number">1</span>])</span><br><span class="line">            <span class="comment">#改变processFlag的布尔值为False</span></span><br><span class="line">            processFlag = <span class="literal">False</span></span><br><span class="line">            <span class="comment">#因为这里会把i值从原来的值减一所以需要加一运算</span></span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">    <span class="comment">#对变量i加一</span></span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"><span class="comment">#对嵌套列表中的元素进行循环遍历</span></span><br><span class="line"><span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">9</span>):</span><br><span class="line">    <span class="comment">#打印嵌套列表中所有的元素</span></span><br><span class="line">    <span class="built_in">print</span>(list_1[y])</span><br></pre></td></tr></table></figure>
 
 
       </div>
@@ -719,16 +759,16 @@
         <div class="copyright">
   <ul class="post-copyright">
     <li class="post-copyright-author">
-    <strong>author:  </strong>Motwt</a>
+    <strong>作者:  </strong>Motwt</a>
     </li>
     <li class="post-copyright-link">
-    <strong>link:  </strong>
-    <a href="/2023/04/25/yanghuiTriangle/" target="_blank" title="Python杨辉三角题目实战">http://example.com/2023/04/25/yanghuiTriangle/</a>
+    <strong>文章链接:  </strong>
+    <a href="/Pythonfunction/" target="_blank" title="Python函数题目实战">http://example.com/Pythonfunction/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>Copyright notice:   </strong>
-      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      reprint policy. If reproduced, please indicate source!
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
     </li>
   </ul>
 <div>
@@ -745,19 +785,16 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
     </div>
-    <a href="/2023/05/17/pythonfunction/" class="post-nav-link">
+    <a href="/phpTime/" class="post-nav-link">
       <div class="title">
-        <i class="fas fa-angle-left"></i> Prev:
-        <div class="title-text">Python函数题目实战</div>
+        <i class="fas fa-angle-left"></i> 上一篇:
+        <div class="title-text">php之日历项目实战经验</div>
       </div>
       
       <!-- <div class="content">
-        本次所涉及到的知识有：python定义函数(def)、调用函数、函数的参数、函数的返回值。
-
-
-Actual Comba
+        本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、fo
       </div> -->
     </a>
   </div>
@@ -768,15 +805,18 @@ Actual Comba
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2023/04/04/pythonproject2/" class="post-nav-link">
+    <a href="/yanghuiTriangle/" class="post-nav-link">
       <div class="title">
-        Next: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Python字符串常见题目解析</div>
+        下一篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">Python杨辉三角题目实战</div>
       </div>
       <!-- <div class="content">
-        本次所涉及到的知识有：itertools模块、cycle函数、chr函数、ord函数、next函数、python定义函数
+        本次所涉及到的知识有：列表(List)、列表嵌套、del方法、len方法、insert方法。
+
+
+正文某日，李子从一座山
       </div> -->
     </a>
   </div>
@@ -862,7 +902,7 @@ Actual Comba
           
         
           
-            <a href="mailto:me@xxx.com"
+            <a href="mailto:motwt@foxmail.com"
               class="social fas fa-envelope flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -871,21 +911,7 @@ Actual Comba
           
         
           
-            <a href="https://github.com/yuang01/hexo-theme-bamboo"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
         
-          
-            <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=你的qq号码"
-              class="social fab fa-qq flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
           
         
       </div>
@@ -914,7 +940,7 @@ Actual Comba
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E6%96%87"><span class="toc-text">正文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-text">完整代码</span></a></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Actual-Combat-Question"><span class="toc-text">Actual Combat Question</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-One"><span class="toc-text">Question One</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code"><span class="toc-text">Complete Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-Two"><span class="toc-text">Question Two</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code-1"><span class="toc-text">Complete Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-Three"><span class="toc-text">Question Three</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code-2"><span class="toc-text">Complete Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-Four"><span class="toc-text">Question Four</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code-3"><span class="toc-text">Complete Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-Five"><span class="toc-text">Question Five</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code-4"><span class="toc-text">Complete Code</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
@@ -947,7 +973,7 @@ Actual Comba
             
 
             <div class="post-img-box">
-              <a href="/2023/11/01/php/" class="post-img " style="background-size: cover; 
+              <a href="/phpTime/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
@@ -958,7 +984,7 @@ Actual Comba
                   <span class="post-date">11-01</span>
                 
               </div>
-              <a class="post-title" href="/2023/11/01/php/">php之日历项目实战经验</a>
+              <a class="post-title" href="/phpTime/">php之日历项目实战经验</a>
             </div>
           </div>
         
@@ -968,7 +994,7 @@ Actual Comba
             
 
             <div class="post-img-box">
-              <a href="/2023/05/17/pythonfunction/" class="post-img " style="background-size: cover; 
+              <a href="/Pythonfunction/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
@@ -979,7 +1005,7 @@ Actual Comba
                   <span class="post-date">05-17</span>
                 
               </div>
-              <a class="post-title" href="/2023/05/17/pythonfunction/">Python函数题目实战</a>
+              <a class="post-title" href="/Pythonfunction/">Python函数题目实战</a>
             </div>
           </div>
         
@@ -989,7 +1015,7 @@ Actual Comba
             
 
             <div class="post-img-box">
-              <a href="/2023/04/25/yanghuiTriangle/" class="post-img " style="background-size: cover; 
+              <a href="/yanghuiTriangle/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
@@ -1000,7 +1026,7 @@ Actual Comba
                   <span class="post-date">04-25</span>
                 
               </div>
-              <a class="post-title" href="/2023/04/25/yanghuiTriangle/">Python杨辉三角题目实战</a>
+              <a class="post-title" href="/yanghuiTriangle/">Python杨辉三角题目实战</a>
             </div>
           </div>
         
@@ -1010,7 +1036,7 @@ Actual Comba
             
 
             <div class="post-img-box">
-              <a href="/2023/04/04/pythonproject2/" class="post-img " style="background-size: cover; 
+              <a href="/pythonproject2/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
@@ -1021,7 +1047,7 @@ Actual Comba
                   <span class="post-date">04-04</span>
                 
               </div>
-              <a class="post-title" href="/2023/04/04/pythonproject2/">Python字符串常见题目解析</a>
+              <a class="post-title" href="/pythonproject2/">Python字符串常见题目解析</a>
             </div>
           </div>
         
@@ -1031,7 +1057,7 @@ Actual Comba
             
 
             <div class="post-img-box">
-              <a href="/2023/03/20/pythonproject/" class="post-img " style="background-size: cover; 
+              <a href="/Pythonproject/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
@@ -1042,7 +1068,7 @@ Actual Comba
                   <span class="post-date">03-20</span>
                 
               </div>
-              <a class="post-title" href="/2023/03/20/pythonproject/">Python判断循环语句之基础项目实战</a>
+              <a class="post-title" href="/Pythonproject/">Python判断循环语句之基础项目实战</a>
             </div>
           </div>
         
@@ -1396,11 +1422,11 @@ Actual Comba
             <!-- 不蒜子统计 -->
             <!-- 不蒜子统计 -->
 <span id="busuanzi_container_site_pv">
-      <i class="fas fa-eye" aria-hidden="true"></i>Total visits：<span id="busuanzi_value_site_pv"></span> times
+      <i class="fas fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
 </span>
 <span class="post-meta-divider">|</span>
 <span id="busuanzi_container_site_uv" style='display:none'>
-      <i class="fas fa-users" aria-hidden="true"></i>Number of visitors：<span id="busuanzi_value_site_uv"></span> people
+      <i class="fas fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
 </span>
 
           
@@ -1744,7 +1770,7 @@ Actual Comba
       },
       mounted() {
         const that = this;
-        var copy = 'copy';
+        var copy = '复制';
         /* code */
         var initCopyCode = function () {
           var copyHtml = '';
