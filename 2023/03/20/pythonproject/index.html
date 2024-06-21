@@ -587,8 +587,15 @@
         <p>本次所涉及到的知识有：判断语句、循环语句、字符格式化、转义符、条件判断语句。</p>
 <span id="more"></span>
 
-<h1 id="实战题目"><a href="#实战题目" class="headerlink" title="实战题目"></a>实战题目</h1><div class="note info"><p><strong>题目</strong></p><blockquote><p>(一)输入三个整数，按照从小到大的顺序输出它们的值。</p><p>(二)编写一个程序，用户输入整数a，a的取值范围为2~20，自动打印一个边长为a的正方形。例如，用户输入a为5，则输出一个以5个*为边长且中间为空的正方形。</p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * * * *</span><br><span class="line">*	*</span><br><span class="line">*	*</span><br><span class="line">*	*</span><br><span class="line">* * * * *</span><br></pre></td></tr></table></figure><blockquote><p>(三)编写程序，输出九九乘法表。</p></blockquote></div>
+<h1 id="实战题目"><a href="#实战题目" class="headerlink" title="实战题目"></a>实战题目</h1><blockquote>
+<p>(一)输入三个整数，按照从小到大的顺序输出它们的值。</p>
+<p>(二)编写一个程序，用户输入整数a，a的取值范围为2~20，自动打印一个边长为a的正方形。例如，用户输入a为5，则输出一个以5个*为边长且中间为空的正方形。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * * * *</span><br><span class="line">*	*</span><br><span class="line">*	*</span><br><span class="line">*	*</span><br><span class="line">* * * * *</span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p>(三)编写程序，输出九九乘法表。</p>
+</blockquote>
 <h2 id="题目一"><a href="#题目一" class="headerlink" title="题目一"></a>题目一</h2><p>首先分析一下题目，输入三个整数的前提是随机的，所以我会使用input作为输出的条件并使用最为基础的判断语句和循环语句去实现该题目的结果。</p>
 <h3 id="一、输入数值"><a href="#一、输入数值" class="headerlink" title="一、输入数值"></a>一、输入数值</h3><p>定义三个整数为a、b、c，并给它们进行包装成用户可以使用的变量。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第一个数&quot;</span>))</span><br><span class="line">b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第二个数&quot;</span>))</span><br><span class="line">c = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第三个数&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;从小到大的顺序输出三个值为：&quot;</span>)</span><br></pre></td></tr></table></figure>
