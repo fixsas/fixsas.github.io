@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>friends | Motwt、Blog</title>
+  <title>Python字符串常见题目解析 | Motwt、Blog</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -537,24 +537,33 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pica.zhimg.com/80/v2-61f99f8dcf899f54cad2a1aa28b21e44_1440w.webp')">
+  background-position: center center;position: relative;background-image:url('https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        friends
+        Python字符串常见题目解析
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2024-06-20 |
+          <i class="fas fa-calendar"></i> Published in：2023-04-04 |
         </span>
       
 
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> category：
+          
+            <a href="/categories/Python/" class="post-detail-header_category">
+              Python
+            </a>
+          
+        </span>
       
 
       
@@ -575,9 +584,115 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        
+        <p>本次所涉及到的知识有：itertools模块、cycle函数、chr函数、ord函数、next函数、python定义函数、string模块、isinstance函数、dictionary、get()方法。</p>
+<span id="more"></span>
+
+<p><strong>注意：此文章仅供参考和学习，并不能完全说明作者的解析是正确的，觉得有错误的欢迎在评论区里指出。</strong></p>
+<div class="note info"><p><strong>题目</strong></p><p><strong>题目一：</strong>python利用异或算法实现字符串加密解密</p><p><strong>题目二：</strong>python利用string模块判断密码强度</p></div>
+
+<h2 id="题目一"><a href="#题目一" class="headerlink" title="题目一"></a>题目一</h2><h3 id="构建异或算法实现加密和解密"><a href="#构建异或算法实现加密和解密" class="headerlink" title="构建异或算法实现加密和解密"></a>构建异或算法实现加密和解密</h3><p>创建一个名为crypt函数，并传入两个参数：source和key。</p>
+<p>source是要加密或解密的字符串，key是密钥字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">crypt</span>(<span class="params">source,key</span>):</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。</p>
+<p>为了达到每一个字符都能加密的效果，需要使用到迭代选择器；也就是使用itertools(循环器)中的cycle函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> cycle</span><br></pre></td></tr></table></figure>
+
+<p>需要一个变量来存放最终的结果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>对密钥进行选择迭代。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">temp = cycle(key)</span><br></pre></td></tr></table></figure>
+
+<p>通过for循环对source中的字符进行遍历。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ch <span class="keyword">in</span> source:</span><br></pre></td></tr></table></figure>
+
+<p>这时就需要使用到这道题就重要的地方“异或运算”。</p>
+<p>首先通过next(temp)对字符进行迭代，然后获取字符串中每一个字符；之后通过ord()获取对应字符的ASCII编码；通过异或运算符的形式对两个ASCII编码进行处理<b>(异或运算符(^):表示对于操作符两侧数字的二进制数进行异或操作。异或操作的含义为：同一位置上的数字相等则得0，同一位置上的数字相异则得1。(二进制表达中只有0,1两个数字))</b>。</p>
+<p>最后通过chr函数对异或处理完的编码进行对应unicode字符的处理并赋值到变量result上。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = result + <span class="built_in">chr</span>(<span class="built_in">ord</span>(ch) ^ <span class="built_in">ord</span>(<span class="built_in">next</span>(temp)))</span><br></pre></td></tr></table></figure>
+
+<p>返回该变量结束crypt函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入字符串并对其加密和解密"><a href="#输入字符串并对其加密和解密" class="headerlink" title="输入字符串并对其加密和解密"></a>输入字符串并对其加密和解密</h3><p>需要加密的字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source = <span class="string">&#x27;Shandong Institute of Business and Technology&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>创建密钥字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">key = <span class="string">&#x27;Dong Fuguo&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>打印没有加密的字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Before Encrypted:&#x27;</span> + source)</span><br></pre></td></tr></table></figure>
+
+<p>对字符串进行加密。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">encrypted = crypt(source,key)</span><br></pre></td></tr></table></figure>
+
+<p>打印加密完成的字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;After Encrypted:&#x27;</span> + encrypted)</span><br></pre></td></tr></table></figure>
+
+<p>对加密的字符串进行解密。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">decrypted = crypt(encrypted,key)</span><br></pre></td></tr></table></figure>
+
+<p>打印解密完成的字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;After Decrypted:&#x27;</span> + decrypted)</span><br></pre></td></tr></table></figure>
+
+<h3 id="完整代码加注释解析"><a href="#完整代码加注释解析" class="headerlink" title="完整代码加注释解析"></a>完整代码加注释解析</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python利用异或算法实现字符串加密解密</span></span><br><span class="line"><span class="comment">#source是要加密或解密的字符串，key是密钥字符串</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">crypt</span>(<span class="params">source,key</span>):</span><br><span class="line">    <span class="comment">#使用itertools模块并引用cycle函数</span></span><br><span class="line">    <span class="keyword">from</span> itertools <span class="keyword">import</span> cycle</span><br><span class="line">    <span class="comment">#使用result变量用来存放最终结果</span></span><br><span class="line">    result = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="comment">#将函数中key的值赋值给temp</span></span><br><span class="line">    <span class="comment">#需要让重复执行key序列的元素</span></span><br><span class="line">    temp = cycle(key)</span><br><span class="line">    <span class="comment">#通过for循环来对source进行循环遍历</span></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> source:</span><br><span class="line">         <span class="comment">#异或运算</span></span><br><span class="line">         <span class="comment">#首先通过next(temp)对字符进行迭代，然后获取字符串中每一个字符</span></span><br><span class="line">         <span class="comment">#之后通过ord()获取对应字符的ASCII编码</span></span><br><span class="line">         <span class="comment">#通过异或运算符对两个ASCII编码进行处理</span></span><br><span class="line">         <span class="comment">#最后通过chr函数对异或处理完的编码进行对应unicode字符的处理</span></span><br><span class="line">         <span class="comment">#赋值到变量result上</span></span><br><span class="line">        result = result + <span class="built_in">chr</span>(<span class="built_in">ord</span>(ch) ^ <span class="built_in">ord</span>(<span class="built_in">next</span>(temp)))</span><br><span class="line">    <span class="comment">#返回该变量结束crypt函数</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"><span class="comment">#需要加密的字符串</span></span><br><span class="line">source = <span class="string">&#x27;Shandong Institute of Business and Technology&#x27;</span></span><br><span class="line"><span class="comment">#密钥字符串</span></span><br><span class="line">key = <span class="string">&#x27;Dong Fuguo&#x27;</span></span><br><span class="line"><span class="comment">#打印没有加密的字符串</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Before Encrypted:&#x27;</span> + source)</span><br><span class="line"><span class="comment">#对字符串进行加密</span></span><br><span class="line">encrypted = crypt(source,key)</span><br><span class="line"><span class="comment">#打印加密完成的字符串</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;After Encrypted:&#x27;</span> + encrypted)</span><br><span class="line"><span class="comment">#对加密的字符串进行解密</span></span><br><span class="line">decrypted = crypt(encrypted,key)</span><br><span class="line"><span class="comment">#打印解密完成的字符串</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;After Decrypted:&#x27;</span> + decrypted)</span><br></pre></td></tr></table></figure>
+
+<h2 id="题目二"><a href="#题目二" class="headerlink" title="题目二"></a>题目二</h2><h3 id="判断字符条件"><a href="#判断字符条件" class="headerlink" title="判断字符条件"></a>判断字符条件</h3><p>首先需要使用string模块，所以导入string模块。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br></pre></td></tr></table></figure>
+
+<p>创建check函数并传入pwd参数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">check</span>(<span class="params">pwd</span>):</span><br></pre></td></tr></table></figure>
+
+<p>使用isinstance函数和len()方法来判断其是否是字符和所需字符的长度。<strong>注意：这道题使用的是not运算符，其判断结果和判断的相反；也就是如果某一条件下判断为false时其结果为true。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(pwd,<span class="built_in">str</span>) <span class="keyword">or</span> <span class="built_in">len</span>(pwd)&lt;<span class="number">6</span>:</span><br></pre></td></tr></table></figure>
+
+<p>判断如果没有符合上面所判断的条件时，就返回“没有合适的密码”。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="string">&#x27;not suitable for password&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建强弱密码对应关系"><a href="#创建强弱密码对应关系" class="headerlink" title="创建强弱密码对应关系"></a>创建强弱密码对应关系</h3><p>创建密码强度等级与包含字符种类的对应关系。<b>(weak:弱、below middle:中间以下、above middle:中间以上、strong:强)</b></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="number">1</span>:<span class="string">&#x27;week&#x27;</span>,<span class="number">2</span>:<span class="string">&#x27;below middle&#x27;</span>,<span class="number">3</span>:<span class="string">&#x27;above middle&#x27;</span>,<span class="number">4</span>:<span class="string">&#x27;strong&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用变量r创建一个有4个False的列表。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r = [<span class="literal">False</span>] * <span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+<p>分别用来标记pwd是否含有数字、小写字母、大写字母和指定的标点符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ch <span class="keyword">in</span> pwd:</span><br><span class="line">            <span class="comment">#判断是否包含数字</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> r[<span class="number">0</span>] <span class="keyword">and</span> ch <span class="keyword">in</span> string.digits:</span><br><span class="line">                r[<span class="number">0</span>] = <span class="literal">True</span></span><br><span class="line">            <span class="comment">#判断是否包含小写字母</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="keyword">not</span> r[<span class="number">1</span>] <span class="keyword">and</span> ch <span class="keyword">in</span> string.ascii_lowercase:</span><br><span class="line">                r[<span class="number">1</span>] = <span class="literal">True</span></span><br><span class="line">            <span class="comment">#判断否包含大写字母</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="keyword">not</span> r[<span class="number">2</span>] <span class="keyword">and</span> ch <span class="keyword">in</span> string.ascii_uppercase:</span><br><span class="line">                r[<span class="number">2</span>] = <span class="literal">True</span></span><br><span class="line">            <span class="comment">#判断否包含指定的标点符号</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="keyword">not</span> r[<span class="number">3</span>] <span class="keyword">and</span> ch <span class="keyword">in</span> <span class="string">&#x27;,.!;?&lt;&gt;&#x27;</span>:</span><br><span class="line">                r[<span class="number">3</span>] = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="返回密码强度"><a href="#返回密码强度" class="headerlink" title="返回密码强度"></a>返回密码强度</h3><p>通过Dictionary中get()方法获取所对应键的值，如果对应键没有值时就输出’error‘(错误)。</p>
+<p>统计包含的字符种类，返回密码强度，如果统计到的字符种类越多则返回的密码强度越强。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> d.get(r.count(<span class="literal">True</span>),<span class="string">&#x27;error&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>给check()函数传值并打印。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(check(<span class="string">&#x27;a2Cd,11&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3 id="完整代码加注释解析-1"><a href="#完整代码加注释解析-1" class="headerlink" title="完整代码加注释解析"></a>完整代码加注释解析</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python利用string模块判断密码强度</span></span><br><span class="line"><span class="comment">#导入string模块</span></span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">check</span>(<span class="params">pwd</span>):</span><br><span class="line">    <span class="comment">#密码必须至少包含6个字符</span></span><br><span class="line">    <span class="comment">#isinstance是判断是否符合字符串、len是判断其字符串大小</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">isinstance</span>(pwd,<span class="built_in">str</span>) <span class="keyword">or</span> <span class="built_in">len</span>(pwd)&lt;<span class="number">6</span>:</span><br><span class="line">        <span class="comment">#判断如果没有符合上面所判断的条件时，就返回“没有合适的密码”</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;not suitable for password&#x27;</span></span><br><span class="line">    <span class="comment">#密码强度等级与包含字符种类的对应关系</span></span><br><span class="line">    d = &#123;<span class="number">1</span>:<span class="string">&#x27;weak&#x27;</span>,<span class="number">2</span>:<span class="string">&#x27;below middle&#x27;</span>,<span class="number">3</span>:<span class="string">&#x27;above middle&#x27;</span>,<span class="number">4</span>:<span class="string">&#x27;strong&#x27;</span>&#125;</span><br><span class="line">    <span class="comment">#分别用来标记pwd是否含有数字、小写字母、大写字母和指定的标点符号</span></span><br><span class="line">    r = [<span class="literal">False</span>] * <span class="number">4</span></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> pwd:</span><br><span class="line">            <span class="comment">#是否包含数字</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> r[<span class="number">0</span>] <span class="keyword">and</span> ch <span class="keyword">in</span> string.digits:</span><br><span class="line">                r[<span class="number">0</span>] = <span class="literal">True</span></span><br><span class="line">            <span class="comment">#是否包含小写字母</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="keyword">not</span> r[<span class="number">1</span>] <span class="keyword">and</span> ch <span class="keyword">in</span> string.ascii_lowercase:</span><br><span class="line">                r[<span class="number">1</span>] = <span class="literal">True</span></span><br><span class="line">            <span class="comment">#是否包含大写字母</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="keyword">not</span> r[<span class="number">2</span>] <span class="keyword">and</span> ch <span class="keyword">in</span> string.ascii_uppercase:</span><br><span class="line">                r[<span class="number">2</span>] = <span class="literal">True</span></span><br><span class="line">            <span class="comment">#是否包含指定的标点符号</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="keyword">not</span> r[<span class="number">3</span>] <span class="keyword">and</span> ch <span class="keyword">in</span> <span class="string">&#x27;,.!;?&lt;&gt;&#x27;</span>:</span><br><span class="line">                r[<span class="number">3</span>] = <span class="literal">True</span></span><br><span class="line">    <span class="comment">#统计包含的字符种类，返回密码强度</span></span><br><span class="line">    <span class="comment">#通过Dictionary中get()方法获取所对应键的值</span></span><br><span class="line">    <span class="comment">#如果对应键没有值时就输出’error‘(错误)</span></span><br><span class="line">    <span class="keyword">return</span> d.get(r.count(<span class="literal">True</span>),<span class="string">&#x27;error&#x27;</span>)</span><br><span class="line"><span class="comment">#给check()函数传值并打印</span></span><br><span class="line"><span class="built_in">print</span>(check(<span class="string">&#x27;a2Cd,11&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
       </div>
       <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" class="">
+              实战教学
+            </a>
+          
+            <a href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" class="">
+              进阶方法
+            </a>
+          
+            <a href="/tags/Python/" class="">
+              Python
+            </a>
+          
+        </div>
         
       </div>
       
@@ -588,7 +703,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>link:  </strong>
-    <a href="/friends/index.html" target="_blank" title="friends">http://example.com/friends/index.html</a>
+    <a href="/2023/04/04/pythonproject2/" target="_blank" title="Python字符串常见题目解析">http://example.com/2023/04/04/pythonproject2/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright notice:   </strong>
@@ -606,7 +721,48 @@
 
 
 
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/2023/04/25/yanghuiTriangle/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> Prev:
+        <div class="title-text">Python杨辉三角题目实战</div>
+      </div>
+      
+      <!-- <div class="content">
+        本次所涉及到的知识有：列表(List)、列表嵌套、del方法、len方法、insert方法。
 
+
+正文某日，李子从一座山
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+    </div>
+    <a href="/2023/03/20/pythonproject/" class="post-nav-link">
+      <div class="title">
+        Next: <i class="fas fa-angle-right"></i>
+        <div class="title-text">Python判断循环语句之基础项目实战</div>
+      </div>
+      <!-- <div class="content">
+        本次所涉及到的知识有：判断语句、循环语句、字符格式化、转义符、条件判断语句。
+
+
+实战题目题目(一)输入三个整数，按照从
+      </div> -->
+    </a>
+  </div>
 
 </div>
 
@@ -729,58 +885,29 @@
   <div class="layout_sticky">    
     
       
-        
-    <section class="widget side_category">
-      
+<section class="widget side_toc">
+  
   <header>
     
-      <a style="color: " href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i style="color: " class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-      <div class='content'>
-        <ul class="entry navigation">
-          
-            <li><a class="flat-box"
-              title="/categories/Java/" href="/categories/Java/"
-              id="categoriesJava"
-              ><div class='name'>Java</div><div class='badge'>(4)</div></a></li>
-          
-            <li><a class="flat-box"
-              title="/categories/PHP/" href="/categories/PHP/"
-              id="categoriesPHP"
-              ><div class='name'>PHP</div><div class='badge'>(1)</div></a></li>
-          
-            <li><a class="flat-box"
-              title="/categories/Python/" href="/categories/Python/"
-              id="categoriesPython"
-              ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
-          
-        </ul>
+  <div class='content'>
+    <div class="toc-main">
+      <div class="toc-content">
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%B8%80"><span class="toc-text">题目一</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E5%BC%82%E6%88%96%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%AF%86%E5%92%8C%E8%A7%A3%E5%AF%86"><span class="toc-text">构建异或算法实现加密和解密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B9%B6%E5%AF%B9%E5%85%B6%E5%8A%A0%E5%AF%86%E5%92%8C%E8%A7%A3%E5%AF%86"><span class="toc-text">输入字符串并对其加密和解密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81%E5%8A%A0%E6%B3%A8%E9%87%8A%E8%A7%A3%E6%9E%90"><span class="toc-text">完整代码加注释解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BA%8C"><span class="toc-text">题目二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E5%AD%97%E7%AC%A6%E6%9D%A1%E4%BB%B6"><span class="toc-text">判断字符条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%BC%BA%E5%BC%B1%E5%AF%86%E7%A0%81%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB"><span class="toc-text">创建强弱密码对应关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E5%AF%86%E7%A0%81%E5%BC%BA%E5%BA%A6"><span class="toc-text">返回密码强度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81%E5%8A%A0%E6%B3%A8%E9%87%8A%E8%A7%A3%E6%9E%90-1"><span class="toc-text">完整代码加注释解析</span></a></li></ol></li></ol> -->
+        <div class="toc"></div>
       </div>
-    </section>
-  
-  
-      
-      
-        
-<section class="widget side_tagcloud">
-    
-  <header>
-    
-      <a style="color: " href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-    <a href="/tags/Java/" style="font-size: 16.5px; color: #888">Java</a> <a href="/tags/PHP/" style="font-size: 14px; color: #999">PHP</a> <a href="/tags/Python/" style="font-size: 19px; color: #777">Python</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" style="font-size: 14px; color: #999">基础语法</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 14px; color: #999">学习心得</a> <a href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" style="font-size: 24px; color: #555">实战教学</a> <a href="/tags/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/" style="font-size: 14px; color: #999">经验之谈</a> <a href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" style="font-size: 21.5px; color: #666">进阶方法</a>
     </div>
+  </div>
 </section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
+</div>
 
-  
-      
       
   <section class="widget side_recent_post">
     
@@ -906,129 +1033,6 @@
     </div>
   </section>
 
-      
-  <section class="widget side_archives">
-    
-    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div>
-  </section>
-
-      <section class="widget side_webinfo">
-  
-  <header>
-    
-      <i style="color: " class="fas fa-chart-line fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>8 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2024/06/20'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Fri Jun 21 2024 14:32:27 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2024-06-21 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2024-06-21 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
-      
     
   </div>
 </aside>

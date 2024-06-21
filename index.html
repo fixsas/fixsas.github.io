@@ -260,6 +260,8 @@
               
                 <a href="/friends" class="drawer-menu-item-link">
                   
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
                   <span class="name">友链</span>
                 </a>
               
@@ -404,6 +406,8 @@
               
                 <a href="/friends" class="menu-item-link" title="友链">
                   
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
                   <span class="name">友链</span>
                 </a>
               
@@ -530,43 +534,281 @@
 
 
 
-<div class="swiper-length" style="display: none;">0</div>
+<div class="swiper-length" style="display: none;">8</div>
 <div id="appSwiper"
-  class="swiper-no-swiping"
+  class=""
   @mouseenter="stopAutoPlay()" 
   @mouseleave="startAutoPlay()"
 >
   <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
     
-      <swiper-slide>
-        <div class="item swiper-lazy" data-background="https://pic4.zhimg.com/80/v2-5317ee3782ed2cdc733a907b0065f895_1440w.jpg" style="background-size: 300000px; 
-          background-position: left center;" style="position: relative;">
-          <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-            <div class="flag">
-              
-              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="https://pic4.zhimg.com/80/v2-5317ee3782ed2cdc733a907b0065f895_1440w.jpg" style="height: 100%; background-size: cover; 
-                background-position: center center;">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
-              </div>
-              <div class="flag-text">
-                <div class="flag-text-content">
-                  <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Motwt、Blog</div>
-                  
-                    <div class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-                      <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" :type-speed="100" :back-speed="50">
-                        <h1 class="typing"></h1>
-                      </vue-typed-js>
-                    </div>
-                    
+      
+        <swiper-slide>
+          <div class="item swiper-lazy" data-background="https://pic4.zhimg.com/80/v2-5317ee3782ed2cdc733a907b0065f895_1440w.jpg" style="background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag">
+                
+                <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="https://pic4.zhimg.com/80/v2-5317ee3782ed2cdc733a907b0065f895_1440w.jpg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
                 </div>
-                <div style="display: flex;" class="flag-text-btns">
-                  
-                  
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Motwt、Blog</div>
+                    
+                      <div  class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                        <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" :type-speed="100" :back-speed="50">
+                          <h1 class="typing"></h1>
+                        </vue-typed-js>
+                      </div>
+                      
+                  </div>
+                  <div style="display: flex;" class="flag-text-btns">
+                    
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+        </swiper-slide>
+      
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2023/11/01/php/">
+                        php之日历项目实战经验
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、for循环语句、if条件判断语句).</p></div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2023/11/01/php/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">Read More</a></div>
                 </div>
               </div>
             </div>
-          </div>
-      </swiper-slide>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2023/05/17/pythonfunction/">
+                        Python函数题目实战
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>本次所涉及到的知识有：python定义函数(def)、调用函数、函数的参数、函数的返回值。</p></div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2023/05/17/pythonfunction/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">Read More</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2023/04/25/yanghuiTriangle/">
+                        Python杨辉三角题目实战
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>本次所涉及到的知识有：列表(List)、列表嵌套、del方法、len方法、insert方法。</p></div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2023/04/25/yanghuiTriangle/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">Read More</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2023/04/04/pythonproject2/">
+                        Python字符串常见题目解析
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>本次所涉及到的知识有：itertools模块、cycle函数、chr函数、ord函数、next函数、python定义函数、string模块、isinstance函数、dictionary、get()方法。</p></div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2023/04/04/pythonproject2/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">Read More</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2023/03/20/pythonproject/">
+                        Python判断循环语句之基础项目实战
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>本次所涉及到的知识有：判断语句、循环语句、字符格式化、转义符、条件判断语句。</p></div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2023/03/20/pythonproject/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">Read More</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2022/09/05/javaEAFC/">
+                        Java表达式和流程控制语句题目实战
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>本次设计的知识点：顺序控制语句、条件分支语句、循环控制语句、数组、方法。</p></div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2022/09/05/javaEAFC/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">Read More</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/10/01/java%E5%AE%9E%E6%88%98%E4%B9%8B%E6%B1%82%E9%9D%A2%E5%91%A8/">
+                        Java接口类和抽象题目实战
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><p>此文章只是我本人自己的学习经验，所以有错误的可以指出来。仅供参考和学习交流。</p></div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/10/01/java%E5%AE%9E%E6%88%98%E4%B9%8B%E6%B1%82%E9%9D%A2%E5%91%A8/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">Read More</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" style=" background-size: 300000px; 
+            background-position: left center;" style="position: relative;">
+              <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+              <div class="flag" style="z-index: 2;">
+                <div class="img-mask swiper-lazy" data-background="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div class="flag-text-content">
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
+                      <a href="/2021/09/14/java/">
+                        Java基础语法学习笔记
+                      </a>
+                    </div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">java的基础语法需要掌握：java注释（Annotation）、标识符的定义规则、常量、整形常量（byte、short、int、long）、浮点数常量（float、double）、字符常量（char）、字符串常量（””）、布尔常量（boo</div>
+                  </div>
+                  <div class="bottom-one-btn ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/09/14/java/" class="read-more swiper-btn-color" style="display: inline-block; z-index:1;">Read More</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
+      
+    <div class="swiper-pagination" slot="pagination" pointer style="display: none;"></div>
+    <div class="swiper-button-prev swiper-button-white" pointer slot="button-prev" style=""></div>
+    <div class="swiper-button-next swiper-button-white" pointer slot="button-next" style=""></div>
     
   </swiper>
   
@@ -602,7 +844,7 @@
   var loop = JSON.parse('true') ? false : JSON.parse('true');
   var effect = 'slide';
   var swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
-  var defaultDesc = '个人作品展示博客';
+  var defaultDesc = '个人作品展示博客,擅长前端和后端开发,对其各种主流技术都有涉及';
   defaultDesc = defaultDesc.split(',');
   var defaultDescTypedLoop = JSON.parse('true');
   var vm = new Vue({
@@ -1274,6 +1516,20 @@
 		
 			
 		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
 	</div>
 </div>
 
@@ -1290,42 +1546,428 @@
         <div class="post-info">
           <div class="post-time">
             <i class="fas fa-clock" aria-hidden="true"></i>
-            <span class="post-time">2024-06-20</span>
+            <span class="post-time">2023-11-01</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/2024/06/20/word/"></a>
+            <a class="post-title-link" href="/2023/11/01/php/">php之日历项目实战经验</a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
               <!-- 文章详情页的标签 -->
 
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" rel="tag">实战教学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/" rel="tag">经验之谈</a></li></ul>
+
             </div>
             <div class="post-categories">
               <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/PHP/">PHP</a>
+</div>
 
 
             </div>
           </div>
           <div class="post-img-mobile">
-            <a href="/2024/06/20/word/" style="background-size: cover; 
+            <a href="/2023/11/01/php/" style="background-size: cover; 
               background-position: center center;">
-              <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-03a22891ccba9bccf6424dfd7cbf4be7_1440w.webp" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-03a22891ccba9bccf6424dfd7cbf4be7_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
             </a>
           </div>
           <div class="post-content">
-            
+            <p>本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、for循环语句、if条件判断语句).</p>
           </div>
         </div>
         <div class="post-more">
-          <a href="/2024/06/20/word/">
+          <a href="/2023/11/01/php/">
             <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/2024/06/20/word/" style="background-size: cover; 
+        <a href="/2023/11/01/php/" style="background-size: cover; 
           background-position: center center;">
-          <img class="lazyload lazyload placeholder" src="https://pic1.zhimg.com/80/v2-03a22891ccba9bccf6424dfd7cbf4be7_1440w.webp" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-03a22891ccba9bccf6424dfd7cbf4be7_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+          <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2023-05-17</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2023/05/17/pythonfunction/">Python函数题目实战</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" rel="tag">实战教学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" rel="tag">进阶方法</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Java/">Java</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2023/05/17/pythonfunction/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            <p>本次所涉及到的知识有：python定义函数(def)、调用函数、函数的参数、函数的返回值。</p>
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2023/05/17/pythonfunction/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2023/05/17/pythonfunction/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2023-04-25</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2023/04/25/yanghuiTriangle/">Python杨辉三角题目实战</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" rel="tag">实战教学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" rel="tag">进阶方法</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Python/">Python</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2023/04/25/yanghuiTriangle/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            <p>本次所涉及到的知识有：列表(List)、列表嵌套、del方法、len方法、insert方法。</p>
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2023/04/25/yanghuiTriangle/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2023/04/25/yanghuiTriangle/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2023-04-04</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2023/04/04/pythonproject2/">Python字符串常见题目解析</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" rel="tag">实战教学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" rel="tag">进阶方法</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Python/">Python</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2023/04/04/pythonproject2/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            <p>本次所涉及到的知识有：itertools模块、cycle函数、chr函数、ord函数、next函数、python定义函数、string模块、isinstance函数、dictionary、get()方法。</p>
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2023/04/04/pythonproject2/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2023/04/04/pythonproject2/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2023-03-20</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2023/03/20/pythonproject/">Python判断循环语句之基础项目实战</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" rel="tag">实战教学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" rel="tag">进阶方法</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Python/">Python</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2023/03/20/pythonproject/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            <p>本次所涉及到的知识有：判断语句、循环语句、字符格式化、转义符、条件判断语句。</p>
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2023/03/20/pythonproject/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2023/03/20/pythonproject/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2022-09-05</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2022/09/05/javaEAFC/">Java表达式和流程控制语句题目实战</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" rel="tag">实战教学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" rel="tag">进阶方法</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Java/">Java</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2022/09/05/javaEAFC/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            <p>本次设计的知识点：顺序控制语句、条件分支语句、循环控制语句、数组、方法。</p>
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2022/09/05/javaEAFC/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2022/09/05/javaEAFC/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" class="lazyload placeholder" data-srcset="https://pica.zhimg.com/80/v2-573ac3e25de03fad9c32add5a05e5cfc_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-10-01</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/10/01/java%E5%AE%9E%E6%88%98%E4%B9%8B%E6%B1%82%E9%9D%A2%E5%91%A8/">Java接口类和抽象题目实战</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" rel="tag">实战教学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" rel="tag">进阶方法</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Java/">Java</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2021/10/01/java%E5%AE%9E%E6%88%98%E4%B9%8B%E6%B1%82%E9%9D%A2%E5%91%A8/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            <p>此文章只是我本人自己的学习经验，所以有错误的可以指出来。仅供参考和学习交流。</p>
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/10/01/java%E5%AE%9E%E6%88%98%E4%B9%8B%E6%B1%82%E9%9D%A2%E5%91%A8/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2021/10/01/java%E5%AE%9E%E6%88%98%E4%B9%8B%E6%B1%82%E9%9D%A2%E5%91%A8/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+        </a>
+      </div>
+    </article>
+  
+    
+    <article class="post reveal" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-09-14</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/09/14/java/">Java基础语法学习笔记</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" rel="tag">基础语法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" rel="tag">学习心得</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Java/">Java</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2021/09/14/java/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            java的基础语法需要掌握：java注释（Annotation）、标识符的定义规则、常量、整形常量（byte、short、int、long）、浮点数常量（float、double）、字符常量（char）、字符串常量（””）、布尔常量（boo
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/09/14/java/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2021/09/14/java/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
       </div>
     </article>
@@ -1355,7 +1997,7 @@
           <h2>Motwt</h2>
         
         
-          <p>锟斤拷</p>
+          <p>Hello World</p>
 
         
         
@@ -1415,10 +2057,55 @@
     
       
         
+    <section class="widget side_category">
+      
+  <header>
+    
+      <a style="color: " href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+      <div class='content'>
+        <ul class="entry navigation">
+          
+            <li><a class="flat-box"
+              title="/categories/Java/" href="/categories/Java/"
+              id="categoriesJava"
+              ><div class='name'>Java</div><div class='badge'>(4)</div></a></li>
+          
+            <li><a class="flat-box"
+              title="/categories/PHP/" href="/categories/PHP/"
+              id="categoriesPHP"
+              ><div class='name'>PHP</div><div class='badge'>(1)</div></a></li>
+          
+            <li><a class="flat-box"
+              title="/categories/Python/" href="/categories/Python/"
+              id="categoriesPython"
+              ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
+          
+        </ul>
+      </div>
+    </section>
+  
   
       
       
         
+<section class="widget side_tagcloud">
+    
+  <header>
+    
+      <a style="color: " href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+    <a href="/tags/Java/" style="font-size: 16.5px; color: #888">Java</a> <a href="/tags/PHP/" style="font-size: 14px; color: #999">PHP</a> <a href="/tags/Python/" style="font-size: 19px; color: #777">Python</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" style="font-size: 14px; color: #999">基础语法</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 14px; color: #999">学习心得</a> <a href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" style="font-size: 24px; color: #555">实战教学</a> <a href="/tags/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/" style="font-size: 14px; color: #999">经验之谈</a> <a href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" style="font-size: 21.5px; color: #666">进阶方法</a>
+    </div>
+</section>
+
   
       
       
@@ -1443,18 +2130,102 @@
             
 
             <div class="post-img-box">
-              <a href="/2024/06/20/word/" class="post-img " style="background-size: cover; 
+              <a href="/2023/11/01/php/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic1.zhimg.com/80/v2-03a22891ccba9bccf6424dfd7cbf4be7_1440w.webp" class="lazyload placeholder" data-srcset="https://pic1.zhimg.com/80/v2-03a22891ccba9bccf6424dfd7cbf4be7_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
               </a>
             </div>
             <div class="post-date-title">
               <div>
                 
-                  <span class="post-date">06-20</span>
+                  <span class="post-date">11-01</span>
                 
               </div>
-              <a class="post-title" href="/2024/06/20/word/">no title</a>
+              <a class="post-title" href="/2023/11/01/php/">php之日历项目实战经验</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/05/17/pythonfunction/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">05-17</span>
+                
+              </div>
+              <a class="post-title" href="/2023/05/17/pythonfunction/">Python函数题目实战</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/04/25/yanghuiTriangle/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">04-25</span>
+                
+              </div>
+              <a class="post-title" href="/2023/04/25/yanghuiTriangle/">Python杨辉三角题目实战</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/04/04/pythonproject2/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" class="lazyload placeholder" data-srcset="https://pic4.zhimg.com/80/v2-83ea273b88e119d9615aed0d89aad4ab_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">04-04</span>
+                
+              </div>
+              <a class="post-title" href="/2023/04/04/pythonproject2/">Python字符串常见题目解析</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/03/20/pythonproject/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-e22aaad20d20634f506f57fff0fcbc17_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">03-20</span>
+                
+              </div>
+              <a class="post-title" href="/2023/03/20/pythonproject/">Python判断循环语句之基础项目实战</a>
             </div>
           </div>
         
@@ -1465,7 +2236,7 @@
       
   <section class="widget side_archives">
     
-    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">1</span></a></li></ul></div>
+    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div>
   </section>
 
       <section class="widget side_webinfo">
@@ -1482,7 +2253,7 @@
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>1 篇</div>
+          <div>8 篇</div>
         </div>
       
 
@@ -1525,8 +2296,8 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Thu Jun 20 2024 19:45:18 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2024-06-20 日</div>
+            <div id="last-update" style="display: none;">Fri Jun 21 2024 14:32:27 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2024-06-21 日</div>
           
         </div>
         
@@ -1576,7 +2347,7 @@
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2024-06-20 日';
+            document.getElementById('last-update-show').innerHTML = '2024-06-21 日';
           }
         </script>
         

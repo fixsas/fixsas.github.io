@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>friends | Motwt、Blog</title>
+  <title>Python函数题目实战 | Motwt、Blog</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -537,24 +537,33 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pica.zhimg.com/80/v2-61f99f8dcf899f54cad2a1aa28b21e44_1440w.webp')">
+  background-position: center center;position: relative;background-image:url('https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        friends
+        Python函数题目实战
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2024-06-20 |
+          <i class="fas fa-calendar"></i> Published in：2023-05-17 |
         </span>
       
 
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> category：
+          
+            <a href="/categories/Java/" class="post-detail-header_category">
+              Java
+            </a>
+          
+        </span>
       
 
       
@@ -575,9 +584,175 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        
+        <p>本次所涉及到的知识有：python定义函数(def)、调用函数、函数的参数、函数的返回值。</p>
+<span id="more"></span>
+
+<h2 id="Actual-Combat-Question"><a href="#Actual-Combat-Question" class="headerlink" title="Actual Combat Question"></a>Actual Combat Question</h2><blockquote>
+<p>(一)分别定义两个函数：max_divider、min_multipliter，返回两个数（从键盘输入的整数）中的最大公约数和最小公倍数。</p>
+<p>举例如下所示：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入第<span class="number">1</span>个整数:<span class="number">4</span></span><br><span class="line">请输入第<span class="number">1</span>个整数:<span class="number">6</span></span><br><span class="line">最大公约数为:<span class="number">2</span></span><br><span class="line">最小公倍数为:<span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>(二) 猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个。第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃前一天剩下的一半零一个。到第十天早上想再吃时，见只剩下一个桃子了。求第一天共摘多少个桃子？编写函数得到猴子第一天桃子的数量。</p>
+<p>(三)一只球从80m高度自由下落，每次落地后返回原高度的一半，在落下。求：它在第10次落地时共经过多少米？第10次反弹多高？编写函数实现。</p>
+<p>(四)编写函数，求出1+（1+2）+（1+2+3）+····+（1+2+3+4+···+n）的和，函数以n为参数，n由用户从键盘输入。</p>
+<p>(五)编写函数，验证哥德巴赫猜想，即任何一个大于6的偶数均可以表示成两个素数之和。</p>
+</blockquote>
+<h2 id="Question-One"><a href="#Question-One" class="headerlink" title="Question One"></a>Question One</h2><p>First，create two function in order to in base，because of  programe require retrue two number and require is a max_divider function and min_multipliter function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create two function in programe order to base</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">max_divider</span>():</span><br><span class="line">    <span class="comment"># user input type int number</span></span><br><span class="line">    a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第一个整数：&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">min_multipliter</span>():</span><br><span class="line">    <span class="comment"># user input type int number</span></span><br><span class="line">    b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第一个整数：&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> b</span><br></pre></td></tr></table></figure>
+
+<p>Great，after create two function，you need call these two function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># call name max_divider function</span></span><br><span class="line">c = max_divider()</span><br><span class="line"><span class="comment"># call name min_multipliter function</span></span><br><span class="line">d = min_multipliter()</span><br></pre></td></tr></table></figure>
+
+<p>I use lists to solve this problem，so i will create three null list。first list <code>(list)</code> in order to append fin ally result，second list <code>(list1)</code> in order to append result in max_divider user input，third list <code>(list2)</code> in order to append result in min_multipliter user input。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br><span class="line">list1 = []</span><br><span class="line">list2 = [] </span><br></pre></td></tr></table></figure>
+
+<p>OK，start structure max_divider <code>(Greatest Common Divisor)</code> code。why is a Greatest Common Divisor? In short, the number that can divide a number is the divisor of the number, and the number that can be divided by a number is the multiple of the number。</p>
+<p>Example：</p>
+<blockquote>
+<p>number1 &#x3D; 12(It’s divisible the number:1,2,3,4,6,12)</p>
+<p>number2 &#x3D; 18(It’s divisible the number:1,2,3,6,9,18)</p>
+<p>Greatest Common Divisor  &#x3D; 6</p>
+</blockquote>
+<p style="text-align:justify; text-justify:inter-ideograph;">So，i will make for loop ergodic variable c and variable d，after give zero to variable rang every number divide user input the number，decide these number divide variable c and variable b whether to be divisible by，last save in null list。</p>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(c):</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> c % i == <span class="number">0</span>:</span><br><span class="line">        list1.append(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(d):</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> d % i == <span class="number">0</span>:</span><br><span class="line">        list2.append(i)</span><br></pre></td></tr></table></figure>
+
+<p>Decide alike number save in <code>list</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="comment"># screen alike number</span></span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> list2:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br></pre></td></tr></table></figure>
+
+<p>Finally，by using sort method and flashback method, the result is obtained <code>Greatest Common Divisor</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>.sort(reverse=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>After solve Greatest Common Divisor，now come to solve <code>Least Common Multiple</code>。</p>
+<p style="text-align:justify; text-justify:inter-ideograph;">What is a Least Common Multiple？the common multiple of two or more integers is called their common multiple, and the smallest common multiple except 0 is called the least common multiple of these integers。</p>
+
+<p>Example：</p>
+<blockquote>
+<p>number1 &#x3D; 4(multiple of this number:4,8,12,16,20,24……)</p>
+<p>number2 &#x3D; 6(multiple of this number:6,12,18,24,30,36……)</p>
+<p>Least Common Multiple &#x3D; 12</p>
+</blockquote>
+<p style="text-align:justify; text-justify:inter-ideograph;">is it exciting？yes this very interesting。same as the previous question create three list in order to solve Least Common Multiple the key，but functionally is alike。</p>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br><span class="line">list1 = []</span><br><span class="line">list2 = [] </span><br></pre></td></tr></table></figure>
+
+<p>This question i by  for loop from 1 to 1000 rang multiply user input number，after append in null list。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">1000</span>):</span><br><span class="line">    <span class="comment"># get max_divider from 1 to 1000 the product</span></span><br><span class="line">    e = c * i</span><br><span class="line">    list1.append(e)</span><br><span class="line">    <span class="comment"># get min_multipliter from 1 to 1000 the product</span></span><br><span class="line">    f = d * i</span><br><span class="line">    list2.append(f)</span><br></pre></td></tr></table></figure>
+
+<p>Decide alike number save in <code>list</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="comment"># screen alike number</span></span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> list2:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br></pre></td></tr></table></figure>
+
+<p>Finally ，because of get list in the smallest numberical value，so you don’t need using sort method。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最小公倍数为：&quot;</span>,<span class="built_in">list</span>[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<h3 id="Complete-Code"><a href="#Complete-Code" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">max_divider</span>():</span><br><span class="line">    a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第一个整数：&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">min_multipliter</span>():</span><br><span class="line">    b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入第一个整数：&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> b</span><br><span class="line">c = max_divider()</span><br><span class="line">d = min_multipliter()</span><br><span class="line"><span class="built_in">list</span> = []</span><br><span class="line">list1 = []</span><br><span class="line">list2 = [] </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(c):</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> c % i == <span class="number">0</span>:</span><br><span class="line">        list1.append(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(d):</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> d % i == <span class="number">0</span>:</span><br><span class="line">        list2.append(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> list2:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br><span class="line"><span class="built_in">list</span>.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最大公约数为：&quot;</span>,<span class="built_in">list</span>[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">list</span> = []</span><br><span class="line">list1 = []</span><br><span class="line">list2 = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">1000</span>):</span><br><span class="line">    e = c * i</span><br><span class="line">    list1.append(e)</span><br><span class="line">    f = d * i</span><br><span class="line">    list2.append(f)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">    <span class="keyword">if</span> i <span class="keyword">in</span> list2:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;最小公倍数为：&quot;</span>,<span class="built_in">list</span>[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<h2 id="Question-Two"><a href="#Question-Two" class="headerlink" title="Question Two"></a>Question Two</h2><p>The second question is a classic question in programming：Monkey Pick Peaches</p>
+<p>This question the solving method use  <code>reverse reasoning</code>。by tenth day the peach number reverse reasoning first day peach number。</p>
+<p>Create peachNumber function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">peachNumber</span>():</span><br></pre></td></tr></table></figure>
+
+<p style="text-align:justify; text-justify:inter-ideograph;">In peachNumber function create daygetPeachNumber variable、i variable and Number10 variable，through these variable construct peachNumber function，achieve every day peach the number。</p>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">daygetPeachNumber = <span class="number">10</span></span><br><span class="line">i = <span class="number">1</span></span><br><span class="line">Number10 = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>Create null list in order to append pick peach the number every days。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br></pre></td></tr></table></figure>
+
+<p>At this time the most critical step has come，by the while loop obtain pick peach the number and will result append in list。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> daygetPeachNumber &gt; i:</span><br><span class="line">    <span class="comment"># obtain peach the number in every days</span></span><br><span class="line">    Number = (Number10 + <span class="number">1</span>) * <span class="number">2</span></span><br><span class="line">    <span class="comment"># append result to list</span></span><br><span class="line">    <span class="built_in">list</span>.append(Number)</span><br><span class="line">    <span class="comment"># maintain previous result constant</span></span><br><span class="line">    Number10 = Number</span><br><span class="line">    daygetPeachNumber -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>Finally，reture result。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
+
+<p>For the obtain final result create null list <code>list1</code> and use peachNumber function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list1 = []</span><br><span class="line">list1 = peachNumber()</span><br></pre></td></tr></table></figure>
+
+<p>Because i think print for tenth day to first day the result，so i use sort method。if you hope for first day to tenth day print result，then you don’t need to use sort method。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list1.sort(reverse=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>After by while loop print final result。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">9</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;第10天的桃子数为：&quot;</span>,<span class="number">1</span>)</span><br><span class="line"><span class="keyword">while</span> i &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;第%d天的挑子数为：%d&quot;</span> %(i,list1[i-<span class="number">1</span>]))</span><br><span class="line">    i -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Complete-Code-1"><a href="#Complete-Code-1" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">peachNumber</span>():</span><br><span class="line">    daygetPeachNumber = <span class="number">10</span></span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    Number10 = <span class="number">1</span></span><br><span class="line">    <span class="built_in">list</span> = []</span><br><span class="line">    <span class="keyword">while</span> daygetPeachNumber &gt; i:</span><br><span class="line">        Number = (Number10 + <span class="number">1</span>) * <span class="number">2</span></span><br><span class="line">        <span class="built_in">list</span>.append(Number)</span><br><span class="line">        Number10 = Number</span><br><span class="line">        daygetPeachNumber -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span></span><br><span class="line">list1 = []</span><br><span class="line">list1 = peachNumber()</span><br><span class="line">list1.sort(reverse=<span class="literal">True</span>)</span><br><span class="line">i = <span class="number">9</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;第10天的桃子数为：&quot;</span>,<span class="number">1</span>)</span><br><span class="line"><span class="keyword">while</span> i &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;第%d天的挑子数为：%d&quot;</span> %(i,list1[i-<span class="number">1</span>]))</span><br><span class="line">    i -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Question-Three"><a href="#Question-Three" class="headerlink" title="Question Three"></a>Question Three</h2><p>This question at first glance it looks a physics problem。</p>
+<p>In fact，it is a simple physics problem，if you have not careful observed will step on the pit。</p>
+<p>OK，first this question have two problem，i will use two function（<code>calculationHeight</code> and <code>tenHeight</code>） solve this two problem in this question。</p>
+<p>Create first function calulation，solve how many meters did it pass on the 10th landing。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># incoming one height parameter</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculationHeight</span>(<span class="params">height</span>):</span><br></pre></td></tr></table></figure>
+
+<p>Because obtain total height，so find the height of each ball falling is divided by 2 on the basis of the first time and add。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="comment"># for storage final result</span></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line">    height1 = (height / <span class="number">2</span>)</span><br><span class="line">    <span class="built_in">sum</span> = <span class="built_in">sum</span> + height + height1</span><br><span class="line">    height = height1</span><br><span class="line">	i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>After that，you think by the while enough loop ten times obtain result ？NO！</p>
+<p>Here have a pit！if loop ten times obtain the result of the ball bounced on the tenth time。so ,we need loop nine times just fine。by <code>if</code> judgment obtain nine time the number and add for variable sum。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> i == <span class="number">9</span>:</span><br><span class="line">   <span class="built_in">sum</span> += height</span><br></pre></td></tr></table></figure>
+
+<p>Return variable <code>sum</code>，obtain  how many meters did it pass on the 10th landing the height。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="built_in">sum</span></span><br></pre></td></tr></table></figure>
+
+<p>Create second function tenHeight，solve how high is the 10th rebound。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">tenHeight</span>(<span class="params">num</span>):</span><br></pre></td></tr></table></figure>
+
+<p>Definition variable <code>height</code> assignment 80 the number and calculate the height of the ball。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">height = <span class="number">80</span></span><br></pre></td></tr></table></figure>
+
+<p>After with same as the previous solution，fianlly by <code>if</code> judment obtain tenth time ball the height。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt;= <span class="number">10</span>:</span><br><span class="line">   height1 = (height / <span class="number">2</span>)</span><br><span class="line">   height = height1</span><br><span class="line">   <span class="keyword">if</span> i == <span class="number">10</span>:</span><br><span class="line">      <span class="built_in">sum</span> += height</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"><span class="keyword">return</span> <span class="built_in">sum</span></span><br></pre></td></tr></table></figure>
+
+<p>Use calculationHeight function and tenHeight function，print input final result。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># need for function incoming parameters(80、10)</span></span><br><span class="line">a = calculationHeight(<span class="number">80</span>)</span><br><span class="line">b = tenHeight(<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;它在第10次落地时共经过%f&quot;</span> %a,<span class="string">&quot;米&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;它在第10次反弹%f&quot;</span> %b,<span class="string">&quot;米&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Complete-Code-2"><a href="#Complete-Code-2" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#求球在80米反弹的高度问题</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calculationHeight</span>(<span class="params">height</span>):</span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    <span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i &lt; <span class="number">10</span>:</span><br><span class="line">        height1 = (height / <span class="number">2</span>)</span><br><span class="line">        <span class="built_in">sum</span> = <span class="built_in">sum</span> + height + height1</span><br><span class="line">        height = height1</span><br><span class="line">        <span class="keyword">if</span> i == <span class="number">9</span>:</span><br><span class="line">            <span class="built_in">sum</span> += height</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">tenHeight</span>(<span class="params">num</span>):</span><br><span class="line">    height = <span class="number">80</span></span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    <span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;= <span class="number">10</span>:</span><br><span class="line">        height1 = (height / <span class="number">2</span>)</span><br><span class="line">        height = height1</span><br><span class="line">        <span class="keyword">if</span> i == <span class="number">10</span>:</span><br><span class="line">            <span class="built_in">sum</span> += height</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span></span><br><span class="line">a = calculationHeight(<span class="number">80</span>)</span><br><span class="line">b = tenHeight(<span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;它在第10次落地时共经过%f&quot;</span> %a,<span class="string">&quot;米&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;它在第10次反弹%f&quot;</span> %b,<span class="string">&quot;米&quot;</span>)</span><br><span class="line"><span class="comment"># 它在第10次落地时共经过239.687500 米</span></span><br><span class="line"><span class="comment"># 它在第10次反弹0.078125 米</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Question-Four"><a href="#Question-Four" class="headerlink" title="Question Four"></a>Question Four</h2><p>The solution method of this question is similar to the second and third questions。by <code>while</code> obtain user input need multiply the number，by <code>for</code> obtain Sigma the effect。</p>
+<h3 id="Complete-Code-3"><a href="#Complete-Code-3" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#∑</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sigma</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line">    a = <span class="number">0</span></span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    f = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i &lt;= num:</span><br><span class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>):</span><br><span class="line">            a = a + f</span><br><span class="line">        <span class="built_in">sum</span> = <span class="built_in">sum</span> + a</span><br><span class="line">        a = <span class="number">0</span></span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span></span><br><span class="line">a = sigma(<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入一个整数：&quot;</span>)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;总和：&quot;</span>,a)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Question-Five"><a href="#Question-Five" class="headerlink" title="Question Five"></a>Question Five</h2><p>Before doing this question we need know <code>prime number</code> 。</p>
+<p><code>prime number</code>：a prime number refers to a natural number that has no other factors except 1 and itself among the natural numbers greater than 1。</p>
+<p>Example：</p>
+<blockquote>
+<p>3、5、7、11、13、17、19、23……..</p>
+</blockquote>
+<p>Create ColdbachConjecture function and incoming parameters num。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">GoldbachConjecture</span>(<span class="params">num</span>):</span><br></pre></td></tr></table></figure>
+
+<p>Construct a simple judgment through the concept of prime numbers and for result append null list。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,num):</span><br><span class="line">    fg = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,i-<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> i % j == <span class="number">0</span>:</span><br><span class="line">            fg = <span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">if</span> fg == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">list</span>.append(i)</span><br></pre></td></tr></table></figure>
+
+<p>Because question require even number than 6。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6</span>, num):</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        list1.append(i)</span><br></pre></td></tr></table></figure>
+
+<p>Finally，by <code>for</code> loop and <code>if</code> judment decide this question and print result。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">   <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">      <span class="keyword">for</span> j <span class="keyword">in</span> list1:</span><br><span class="line">          <span class="keyword">if</span> i + h == j:</span><br><span class="line">             <span class="built_in">print</span>(<span class="string">&quot;%d + %d = %d&quot;</span>%(i,h,j))</span><br></pre></td></tr></table></figure>
+
+<p>Use ColdbachConjecture function。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GoldbachConjecture(<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入大于6的整数：&quot;</span>)))</span><br></pre></td></tr></table></figure>
+
+<h3 id="Complete-Code-4"><a href="#Complete-Code-4" class="headerlink" title="Complete Code"></a>Complete Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#哥德巴赫猜想</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">GoldbachConjecture</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="built_in">list</span> = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,num):</span><br><span class="line">        fg = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,i-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> i % j == <span class="number">0</span>:</span><br><span class="line">                fg = <span class="number">1</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> fg == <span class="number">0</span>:</span><br><span class="line">            <span class="built_in">list</span>.append(i)</span><br><span class="line">    list1 = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6</span>, num):</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">            list1.append(i)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">        <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">list</span>:</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> list1:</span><br><span class="line">                <span class="keyword">if</span> i + h == j:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&quot;%d + %d = %d&quot;</span>%(i,h,j))</span><br><span class="line">GoldbachConjecture(<span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入大于6的整数：&quot;</span>)))</span><br></pre></td></tr></table></figure>
+
+
+
+
       </div>
       <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" class="">
+              实战教学
+            </a>
+          
+            <a href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" class="">
+              进阶方法
+            </a>
+          
+            <a href="/tags/Python/" class="">
+              Python
+            </a>
+          
+        </div>
         
       </div>
       
@@ -588,7 +763,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>link:  </strong>
-    <a href="/friends/index.html" target="_blank" title="friends">http://example.com/friends/index.html</a>
+    <a href="/2023/05/17/pythonfunction/" target="_blank" title="Python函数题目实战">http://example.com/2023/05/17/pythonfunction/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright notice:   </strong>
@@ -606,7 +781,45 @@
 
 
 
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/v2-a5267dfbf175991d4b3a69b41f3f678a_b.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/2023/11/01/php/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> Prev:
+        <div class="title-text">php之日历项目实战经验</div>
+      </div>
+      
+      <!-- <div class="content">
+        本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、fo
+      </div> -->
+    </a>
+  </div>
 
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+    </div>
+    <a href="/2023/04/25/yanghuiTriangle/" class="post-nav-link">
+      <div class="title">
+        Next: <i class="fas fa-angle-right"></i>
+        <div class="title-text">Python杨辉三角题目实战</div>
+      </div>
+      <!-- <div class="content">
+        本次所涉及到的知识有：列表(List)、列表嵌套、del方法、len方法、insert方法。
+
+
+正文某日，李子从一座山
+      </div> -->
+    </a>
+  </div>
 
 </div>
 
@@ -729,58 +942,29 @@
   <div class="layout_sticky">    
     
       
-        
-    <section class="widget side_category">
-      
+<section class="widget side_toc">
+  
   <header>
     
-      <a style="color: " href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i style="color: " class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-      <div class='content'>
-        <ul class="entry navigation">
-          
-            <li><a class="flat-box"
-              title="/categories/Java/" href="/categories/Java/"
-              id="categoriesJava"
-              ><div class='name'>Java</div><div class='badge'>(4)</div></a></li>
-          
-            <li><a class="flat-box"
-              title="/categories/PHP/" href="/categories/PHP/"
-              id="categoriesPHP"
-              ><div class='name'>PHP</div><div class='badge'>(1)</div></a></li>
-          
-            <li><a class="flat-box"
-              title="/categories/Python/" href="/categories/Python/"
-              id="categoriesPython"
-              ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
-          
-        </ul>
+  <div class='content'>
+    <div class="toc-main">
+      <div class="toc-content">
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Actual-Combat-Question"><span class="toc-text">Actual Combat Question</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-One"><span class="toc-text">Question One</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code"><span class="toc-text">Complete Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-Two"><span class="toc-text">Question Two</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code-1"><span class="toc-text">Complete Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-Three"><span class="toc-text">Question Three</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code-2"><span class="toc-text">Complete Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-Four"><span class="toc-text">Question Four</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code-3"><span class="toc-text">Complete Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Question-Five"><span class="toc-text">Question Five</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Code-4"><span class="toc-text">Complete Code</span></a></li></ol></li></ol> -->
+        <div class="toc"></div>
       </div>
-    </section>
-  
-  
-      
-      
-        
-<section class="widget side_tagcloud">
-    
-  <header>
-    
-      <a style="color: " href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-    <a href="/tags/Java/" style="font-size: 16.5px; color: #888">Java</a> <a href="/tags/PHP/" style="font-size: 14px; color: #999">PHP</a> <a href="/tags/Python/" style="font-size: 19px; color: #777">Python</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" style="font-size: 14px; color: #999">基础语法</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" style="font-size: 14px; color: #999">学习心得</a> <a href="/tags/%E5%AE%9E%E6%88%98%E6%95%99%E5%AD%A6/" style="font-size: 24px; color: #555">实战教学</a> <a href="/tags/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/" style="font-size: 14px; color: #999">经验之谈</a> <a href="/tags/%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95/" style="font-size: 21.5px; color: #666">进阶方法</a>
     </div>
+  </div>
 </section>
+<!-- 手机端目录按钮 -->
+<div id="toc-mobile-btn">
+  <i class="fas fa-list-ul" aria-hidden="true"></i>
+</div>
 
-  
-      
       
   <section class="widget side_recent_post">
     
@@ -906,129 +1090,6 @@
     </div>
   </section>
 
-      
-  <section class="widget side_archives">
-    
-    <header><a style="color: red" href='/archives/'><i class="fas fa-archive fa-fw" aria-hidden="true"></i><span class='name'>归档</span></a></header><div class="content"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div>
-  </section>
-
-      <section class="widget side_webinfo">
-  
-  <header>
-    
-      <i style="color: " class="fas fa-chart-line fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>8 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2024/06/20'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Fri Jun 21 2024 14:32:27 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2024-06-21 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2024-06-21 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
-      
     
   </div>
 </aside>
