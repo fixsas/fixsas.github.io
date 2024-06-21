@@ -807,8 +807,8 @@
         
       
     <div class="swiper-pagination" slot="pagination" pointer style="display: none;"></div>
-    <div class="swiper-button-prev swiper-button-white" pointer slot="button-prev" style=""></div>
-    <div class="swiper-button-next swiper-button-white" pointer slot="button-next" style=""></div>
+    <div class="swiper-button-prev swiper-button-white" pointer slot="button-prev" style="display: none;"></div>
+    <div class="swiper-button-next swiper-button-white" pointer slot="button-next" style="display: none;"></div>
     
   </swiper>
   
@@ -819,23 +819,9 @@
     </div>
   
   <canvas id="header_canvas"style="position:absolute;bottom:0;width:100%;pointer-events:none;"></canvas>
-  
-    <svg class="hans-container" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none"><defs><path id="hans-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="hans-parallax"><use xlink:href="#hans-wave" x="50" y="0" fill="rgba(224,233,239,.5)"></use><use xlink:href="#hans-wave" x="50" y="3" fill="rgba(224,233,239,.5)"></use><use xlink:href="#hans-wave" x="50" y="6" fill="rgba(224,233,239,.5)"></use></g></svg>
     
 </div>
 
-
-<style>.hans-parallax>use{animation:hans-wave-move 12s linear infinite}.hans-parallax>use:nth-child(1){animation-delay:-2s}.hans-parallax>use:nth-child(2){animation-delay:-2s;animation-duration:5s}.hans-parallax>use:nth-child(3){animation-delay:-4s;animation-duration:3s}@keyframes hans-wave-move{0%{transform:translate(-90px,0)}100%{transform:translate(85px,0)}}</style>
-<style>
-  .hans-container {
-    position: absolute!important;
-    bottom: 0;
-    width: 100%;
-    height: 120px;
-    z-index: 100;
-    pointer-events:none;
-  }
-</style>
 
 
 <script>
@@ -2259,6 +2245,11 @@
 
 
       
+        <div class="webinfo-item">
+          <div>本站总字数：</div>
+          <div>18k 字</div>
+        </div>
+      
 
       
         <div class="webinfo-item">
@@ -2282,7 +2273,7 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Fri Jun 21 2024 14:59:40 GMT+0800 (中国标准时间)</div>
+            <div id="last-update" style="display: none;">Fri Jun 21 2024 16:21:47 GMT+0800 (中国标准时间)</div>
             <div id="last-update-show">2024-06-21 日</div>
           
         </div>
@@ -2647,8 +2638,6 @@
 
     
     <!-- 背景彩带 -->
-    
-      <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
     
 
     <script src="/js/utils/index.js"></script>
@@ -3030,10 +3019,6 @@
 
 <!-- 鼠标点击特效 -->
 <!-- 爱心点击 -->
-
-  
-    <script src="/js/cursor/fireworks.js"></script>
-  
 
 
 
